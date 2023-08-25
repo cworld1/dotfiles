@@ -1,0 +1,53 @@
+# ----- Core -----
+[core]
+; autocrlf = true
+fscache = true
+symlinks = true
+editor = nvim
+
+# ----- Basic -----
+# Default branch
+[init]
+defaultBranch = main
+# Pull method
+[pull]
+rebase = false
+
+# ----- Network -----
+# HTTP and proxy
+[http]
+sslBackend = openssl
+proxy = http://127.0.0.1:7890
+[https]
+proxy = http://127.0.0.1:7890
+# Credentials
+[credential]
+helper = manager
+[credential "https://dev.azure.com"]
+useHttpPath = true
+[credential "https://gitee.com"]
+provider = generic
+[credential "https://ghproxy.com"]
+provider = generic
+
+# ----- Functions -----
+# Convert files to a text format before generating their diff.
+[diff "astextplain"]
+textconv = astextplain
+# Large file storage
+[filter "lfs"]
+clean = git-lfs clean -- %f
+smudge = git-lfs smudge -- %f
+process = git-lfs filter-process
+required = true
+# GPG Commit
+[commit]
+gpgsign = true
+[gpg]
+program = gpg
+
+# ----- UserConf -----
+[user]
+name = CWorld
+email = cworld0@qq.com
+signingkey = D42B539DC7C62A82

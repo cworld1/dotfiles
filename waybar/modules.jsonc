@@ -1,0 +1,149 @@
+{
+  // Left modules
+  "clock": {
+    "format": "{:󰅐 %R, %a %e}",
+    "format-alt": "{:󰅐 %R  󰵜 %m-%e, %a}",
+    "tooltip-format": "<big>{:%Y-%m-%e}</big>\n\n<tt><small>{calendar}</small></tt>",
+    "on-click-right": "bash ~/.config/scripts/rofi/power-menu.sh"
+  },
+  "wlr/workspaces": {
+    "disable-scroll": true,
+    "all-outputs": true,
+    "on-click": "activate",
+    "persistent_workspaces": {
+      "1": [],
+      "2": [],
+      "3": [],
+      "4": [],
+      "5": [],
+      "6": [],
+      "7": [],
+      "8": [],
+      "9": [],
+      "10": []
+    }
+  },
+  // Center modules
+  "hyprland/window": {
+    "format": "{}",
+    "on-click": "~/.config/scripts/hyprpaper.sh"
+  },
+  // Right modules
+  "network": {
+    "interval": 5,
+    "on-click-right": "nm-connection-editor",
+    "format-wifi": "{icon} {bandwidthTotalBits}",
+    "on-click": "pgrep nm-applet && pkill nm-applet || nm-applet",
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ],
+    "format-ethernet": "{ipaddr}/{cidr}",
+    "tooltip-format": "{essid} - {ifname} via {gwaddr}",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "Disconnected ⚠"
+  },
+  "battery": {
+    "states": {
+      "good": 95,
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "{icon}",
+    "format-alt": "{icon} {capacity}%",
+    "format-charging": "󰚥 {capacity}%",
+    "format-plugged": "󰚥 {capacity}%",
+    "format-icons": [
+      "󰂎",
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ]
+  },
+  "backlight": {
+    "format": "{icon}",
+    "format-alt": "{icon} {percent}%",
+    "format-icons": [
+      "󰃞",
+      "󰃟",
+      "󰃝",
+      "󰃠"
+    ],
+    "on-scroll-up": "~/.config/scripts/brightness.sh --inc",
+    "on-scroll-down": "~/.config/scripts/brightness.sh --dec",
+    "scroll-step": 5
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟",
+    "on-click": "~/.config/scripts/volume.sh --toggle",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "~/.config/scripts/volume.sh --inc",
+    "on-scroll-down": "~/.config/scripts/volume.sh --dec",
+    "scroll-step": 5,
+    "format-icons": {
+      "headphone": "󰋋",
+      "hands-free": "󰥰",
+      "headset": "󰋎",
+      "phone": "󰏲",
+      "portable": "",
+      "car": "󰄋",
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
+    }
+  },
+  // "pulseaudio#microphone": {
+  //   "format": "{format_source}",
+  //   "format-source": "󰍮 {volume}%",
+  //   "format-source-muted": "󰍭",
+  //   "on-click": "~/.config/scripts/volume.sh --toggle-mic",
+  //   "on-click-right": "pavucontrol",
+  //   "on-scroll-up": "~/.config/scripts/volume.sh --mic-inc",
+  //   "on-scroll-down": "~/.config/scripts/volume.sh --mic-dec",
+  //   "scroll-step": 5
+  // },
+  // "temperature": {
+  //   "thermal-zone": 1,
+  //   "format": "{temperatureC}°C ",
+  //   "critical-threshold": 80,
+  //   "format-critical": "{temperatureC}°C "
+  // },
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-connected": " {num_connections}",
+    "tooltip-format": "{device_alias}",
+    "tooltip-format-connected": " {device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}",
+    "on-click": "bash ~/.config/scripts/rofi/bluetooth-menu.sh"
+  },
+  "cpu": {
+    "format": "{icon}",
+    "format-alt": "{icon} {usage}%",
+    "format-icons": [
+      "󰫃",
+      "󰫄",
+      "󰫅",
+      "󰫆",
+      "󰫇",
+      "󰫈"
+    ]
+  },
+  "tray": {
+    "icon-size": 18,
+    "spacing": 10
+  }
+}
