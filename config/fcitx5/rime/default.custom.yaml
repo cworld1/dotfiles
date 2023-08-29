@@ -1,0 +1,9 @@
+patch:
+  schema_list:
+    - schema: luna_pinyin
+
+  # Set default input way to simplification
+  # Use Ctrl+` or F4 to change the settings
+  switches:
+    - name: simplification
+      reset: 1                # 增加這一行：默認啓用「繁→簡」轉換。
