@@ -1,20 +1,20 @@
 [Groups/0]
 # Group Name
-Name="Group 2"
+Name=Rime
 # Layout
-Default Layout=gb
+Default Layout=us
 # Default Input Method
-DefaultIM=keyboard-gb
+DefaultIM=rime
 
 [Groups/0/Items/0]
 # Name
-Name=keyboard-gb
+Name=rime
 # Layout
 Layout=
 
 [Groups/1]
 # Group Name
-Name="Group 1"
+Name=Fcitx5
 # Layout
 Default Layout=us
 # Default Input Method
@@ -33,6 +33,6 @@ Name=pinyin
 Layout=
 
 [GroupOrder]
-0="Group 1"
-1="Group 2"
+0=Fcitx5
+1=Rime
 
