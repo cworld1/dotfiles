@@ -16,6 +16,7 @@ configuration {
 
 /*****----- Global Properties -----*****/
 @import                          "shared/colors.rasi"
+@import                          "shared/fonts.rasi"
 
 * {
     border-colour:               var(selected);
@@ -51,7 +52,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       1280px;
+    width:                       700px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -111,7 +112,7 @@ textbox-prompt-colon {
     enabled:                     true;
     padding:                     8px 0px;
     expand:                      false;
-    str:                         "";
+    str:                         "󰅌";
     background-color:            inherit;
     text-color:                  inherit;
 }
@@ -153,8 +154,8 @@ case-indicator {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       15;
-    cycle:                       true;
+    lines:                       8;
+    cycle:                       false;
     dynamic:                     true;
     scrollbar:                   true;
     layout:                      vertical;
