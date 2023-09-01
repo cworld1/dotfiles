@@ -1,5 +1,8 @@
----@diagnostic disable: unused-local
 local wezterm = require("wezterm")
+local keybinds = require("keybinds")
+
+-- Change colorscheme with neovim
+local prefer_scheme = "Nightfox"
 
 local function modify_colorscheme(colorscheme)
 	local file_path = os.getenv("HOME") .. "/.config/wezterm/wezterm.lua"
@@ -8,12 +11,13 @@ local function modify_colorscheme(colorscheme)
 	_f:close()
 
 	local f = assert(io.open(file_path, "w"))
-	data = data:gsub('local color_scheme = "[^%%]-"', ('local color_scheme = "%s"'):format(colorscheme))
+	data = data:gsub('local colorscheme = "[^%%]-"', ('local colorscheme = "%s"'):format(colorscheme))
 	f:write(data)
 	f:close()
 end
 
-wezterm.on("user-var-changed", function(window, pane, name, value)
+wezterm.on("user-var-changed", function(window, _, name, value)
+	-- window, panel, name, value
 	local overrides = window:get_config_overrides() or {}
 	if name == "Nvim_Colorscheme" then
 		overrides.color_scheme = value
@@ -22,9 +26,15 @@ wezterm.on("user-var-changed", function(window, pane, name, value)
 	window:set_config_overrides(overrides)
 end)
 
-local color_scheme = "Nightfox"
+-- Settings
+local config = {
+	-- Default start cammand
+	-- default_prog = { "/bin/bash", "-l", "-c", "tmux attach || tmux" },
 
-return {
+	-- Colorscheme
+	color_scheme = prefer_scheme,
+
+	-- Font
 	font = wezterm.font_with_fallback({
 		{
 			family = "FiraCode Nerd Font",
@@ -42,21 +52,24 @@ return {
 	}),
 	font_size = 12,
 	allow_square_glyphs_to_overflow_width = "Never",
+	warn_about_missing_glyphs = false,
 
-	color_scheme = color_scheme,
-
-	-- default_prog = { "/bin/bash", "-l", "-c", "tmux attach || tmux" },
-
+	-- Window
 	window_padding = {
 		left = 10,
 		right = 2,
-		top = 0,
+		top = 10,
 		bottom = 0,
 	},
 	window_background_opacity = 0.65,
 	window_decorations = "RESIZE",
-	window_close_confirmation = "NeverPrompt",
+	-- window_close_confirmation = "NeverPrompt",
+	inactive_pane_hsb = {
+		saturation = 0.7,
+		brightness = 0.7,
+	},
 
+	-- Tab bar
 	enable_tab_bar = true,
 	use_fancy_tab_bar = false,
 	hide_tab_bar_if_only_one_tab = false,
@@ -65,6 +78,7 @@ return {
 	cursor_blink_ease_in = "Constant",
 	cursor_blink_ease_out = "Constant",
 
+	-- Hyprlink support
 	hyperlink_rules = {
 		-- Linkify things that look like URLs
 		-- This is actually the default if you don't specify any hyperlink_rules
@@ -90,20 +104,8 @@ return {
 		},
 	},
 
-	disable_default_key_bindings = true,
-	keys = {
-		{
-			key = "Enter",
-			mods = "SHIFT",
-			action = wezterm.action.SendString("\x1b[13;2u"),
-		},
-		{ key = "c", mods = "CTRL|SHIFT", action = wezterm.action.CopyTo("Clipboard") },
-		{ key = "v", mods = "CTRL|SHIFT", action = wezterm.action.PasteFrom("Clipboard") },
-		{ key = "Tab", mods = "CTRL", action = wezterm.action({ ActivateTabRelative = 1 }) },
-		{
-			key = "Tab",
-			mods = "CTRL|SHIFT",
-			action = wezterm.action({ ActivateTabRelative = -1 }),
-		},
-	},
+	-- disable_default_key_bindings = true,
+	keys = keybinds,
 }
+
+return config

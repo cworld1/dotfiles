@@ -5,12 +5,12 @@ origin_url = "https://github.com/EdenEast/nightfox.nvim"
 
 [colors]
 foreground = "#cdcecf"
-background = "#192330"
+background = "#262529"
 cursor_bg = "#cdcecf"
 cursor_border = "#cdcecf"
 cursor_fg = "#192330"
 compose_cursor = '#f4a261'
-selection_bg = "#2b3b51"
+selection_bg = "#36557e"
 selection_fg = "#cdcecf"
 scrollbar_thumb = "#71839b"
 split = "#131a24"
