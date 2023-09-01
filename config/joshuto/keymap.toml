@@ -62,7 +62,7 @@ keymap = [
   # Quick actions
   { keys = ["a"], command = ":touch " },
   { keys = ["A"], command = ":mkdir " },
-  { keys = ["r"], command = ":rename " },
+  { keys = ["r"], command = "rename_append" },
   { keys = ["R"], command = "reload_dirlist" },
   { keys = ["H"], command = "toggle_hidden" },
   { keys = ["delete"], command = "delete_files" },
