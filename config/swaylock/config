@@ -29,8 +29,8 @@ key-hl-color=50fa7b
 text-caps-lock-color=f8f8f2
 
 # UI look
-font-size=55
-font=IosevkaLyteTerm
+font=JetBrainsMono Nerd Font
+font-size=60
 indicator-radius=140
 indicator-thickness=15
 
@@ -45,5 +45,5 @@ screenshots
 clock
 indicator
 timestr=%H:%M
-datestr=%Y / %m / %d
+datestr=%Y-%m-%d
 fade-in=0.2
