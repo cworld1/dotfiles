@@ -1,11 +1,12 @@
 #!/bin/bash
 
 # get current script path
-SCRIPT_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")/config" && pwd)"
+PROJECT_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_PATH="$PROJECT_PATH/config"
 
 # if exsists XDG_CONFIG_HOME then use it, else use ~/.config
 if [ -z "$XDG_CONFIG_HOME" ]; then
-	CONFIG_HOME="$HOME/config"
+	CONFIG_HOME="$HOME/.config"
 else
 	CONFIG_HOME="$XDG_CONFIG_HOME"
 fi
