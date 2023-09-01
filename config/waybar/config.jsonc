@@ -7,8 +7,8 @@
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
-  "height": 36,
-  "spacing": 2,
+  "height": 33,
+  "spacing": 0,
   // Left side
   "modules-left": [
     "clock",
@@ -20,14 +20,15 @@
   ],
   // Right side
   "modules-right": [
+    "tray",
     "network",
     "pulseaudio",
     // "pulseaudio#microphone",
     "backlight",
-    "bluetooth",
+    // "bluetooth",
     // "temperature",
     "battery",
-    "cpu",
-    "tray"
+    // "cpu",
+    "custom/notification"
   ]
 }

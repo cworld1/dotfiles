@@ -1,15 +1,24 @@
 {
   // Left modules
   "clock": {
-    "format": "{:󰅐 %R, %a %e}",
+    "format": "{:%R %a %e}",
     "format-alt": "{:󰅐 %R  󰵜 %m-%e, %a}",
-    "tooltip-format": "<big>{:%Y-%m-%e}</big>\n\n<tt><small>{calendar}</small></tt>",
-    "on-click-right": "bash ~/.config/scripts/rofi/power-menu.sh"
+    "tooltip-format": "<big>{:%Y-%m-%e}</big>\n\n<tt><small>{calendar}</small></tt>"
   },
   "wlr/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
     "on-click": "activate",
+    "on-click-right": "close",
+    "format": "{icon}",
+    "format-icons": {
+      "1": "󰣇",
+      "2": "󰈹",
+      "3": "󰵅",
+      "urgent": ""
+      // "active": ""
+      // "default": ""
+    },
     "persistent_workspaces": {
       "1": [],
       "2": [],
@@ -121,29 +130,50 @@
   //   "critical-threshold": 80,
   //   "format-critical": "{temperatureC}°C "
   // },
-  "bluetooth": {
-    "format": "",
-    "format-disabled": "󰂲",
-    "format-connected": " {num_connections}",
-    "tooltip-format": "{device_alias}",
-    "tooltip-format-connected": " {device_enumerate}",
-    "tooltip-format-enumerate-connected": "{device_alias}",
-    "on-click": "bash ~/.config/scripts/rofi/bluetooth-menu.sh"
-  },
-  "cpu": {
-    "format": "{icon}",
-    "format-alt": "{icon} {usage}%",
-    "format-icons": [
-      "󰫃",
-      "󰫄",
-      "󰫅",
-      "󰫆",
-      "󰫇",
-      "󰫈"
-    ]
-  },
+  // "bluetooth": {
+  //   "format": "",
+  //   "format-disabled": "󰂲",
+  //   "format-connected": " {num_connections}",
+  //   "tooltip-format": "{device_alias}",
+  //   "tooltip-format-connected": " {device_enumerate}",
+  //   "tooltip-format-enumerate-connected": "{device_alias}",
+  //   "on-click": "sleep 0.1; bash ~/.config/scripts/rofi/bluetooth-menu.sh",
+  //   "on-click-right": "blueberry"
+  // },
   "tray": {
     "icon-size": 18,
     "spacing": 10
+  },
+  // "cpu": {
+  //   "on-click": "sleep 0.1; swaync-client -t",
+  //   "format": "{icon}",
+  //   "format-icons": [
+  //     "󰫃",
+  //     "󰫄",
+  //     "󰫅",
+  //     "󰫆",
+  //     "󰫇",
+  //     "󰫈"
+  //   ]
+  // },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󱅫",
+      "none": "󰂜",
+      "dnd-notification": "󰂠",
+      "dnd-none": "󰪑",
+      "inhibited-notification": "󰂚",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "󰂛",
+      "dnd-inhibited-none": "󰪑"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1; swaync-client -t -sw",
+    "on-click-right": "sleep 0.1; swaync-client -d -sw",
+    "escape": true
   }
 }
