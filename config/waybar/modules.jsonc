@@ -1,15 +1,24 @@
 {
   // Left modules
   "clock": {
-    "format": "{:󰅐 %R, %a %e}",
+    "format": "{:%R %a %e}",
     "format-alt": "{:󰅐 %R  󰵜 %m-%e, %a}",
-    "tooltip-format": "<big>{:%Y-%m-%e}</big>\n\n<tt><small>{calendar}</small></tt>",
-    // "on-click-right": "sleep 0.1; bash ~/.config/scripts/rofi/power-menu.sh"
+    "tooltip-format": "<big>{:%Y-%m-%e}</big>\n\n<tt><small>{calendar}</small></tt>"
   },
   "wlr/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
     "on-click": "activate",
+    "on-click-right": "close",
+    "format": "{icon}",
+    "format-icons": {
+      "1": "󰣇",
+      "2": "󰈹",
+      "3": "󰵅",
+      "urgent": ""
+      // "active": ""
+      // "default": ""
+    },
     "persistent_workspaces": {
       "1": [],
       "2": [],

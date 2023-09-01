@@ -18,5 +18,3 @@ setenv PYTHONSTARTUP "/etc/python/pythonrc"
 setenv NPM_CONFIG_USERCONFIG "$XDG_CONFIG_HOME"/npm/npmrc
 # PNPM
 setenv PNPM_HOME "$XDG_DATA_HOME"/pnpm
-# GPG
-setenv GNUPGHOME "$XDG_DATA_HOME"/gnupg

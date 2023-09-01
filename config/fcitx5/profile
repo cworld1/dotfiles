@@ -12,6 +12,27 @@ Name=rime
 # Layout
 Layout=
 
+[Groups/1]
+# Group Name
+Name=Nomal
+# Layout
+Default Layout=us
+# Default Input Method
+DefaultIM=pinyin
+
+[Groups/1/Items/0]
+# Name
+Name=keyboard-us
+# Layout
+Layout=
+
+[Groups/1/Items/1]
+# Name
+Name=pinyin
+# Layout
+Layout=
+
 [GroupOrder]
-0="Group 1"
+0=Nomal
+1="Group 1"
 

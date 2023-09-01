@@ -7,3 +7,10 @@ patch:
   switches:
     - name: simplification
       reset: 1                # 增加這一行：默認啓用「繁→簡」轉換。
+  key_binder/bindings:
+    - { when: paging, accept: bracketleft, send: Page_Up }
+    - { when: has_menu, accept: bracketright, send: Page_Down }
+    - { when: composing, accept: Tab, send: Right }
+    - { when: composing, accept: Shift+Tab, send: Left }
+    - { when: always, accept: Control+period, toggle: ascii_punct}
+    - { when: always, accept: Control+Shift+4, toggle: simplification }

@@ -51,6 +51,7 @@ local config = {
 	}),
 	font_size = 12,
 	allow_square_glyphs_to_overflow_width = "Never",
+	warn_about_missing_glyphs = false,
 
 	-- Window
 	window_padding = {
@@ -103,21 +104,26 @@ local config = {
 	},
 
 	-- disable_default_key_bindings = true,
-	-- keys = {
-	-- 	{
-	-- 		key = "Enter",
-	-- 		mods = "SHIFT",
-	-- 		action = wezterm.action.SendString("\x1b[13;2u"),
-	-- 	},
-	-- 	{ key = "c", mods = "CTRL|SHIFT", action = wezterm.action.CopyTo("Clipboard") },
-	-- 	{ key = "v", mods = "CTRL|SHIFT", action = wezterm.action.PasteFrom("Clipboard") },
-	-- 	{ key = "Tab", mods = "CTRL", action = wezterm.action({ ActivateTabRelative = 1 }) },
-	-- 	{
-	-- 		key = "Tab",
-	-- 		mods = "CTRL|SHIFT",
-	-- 		action = wezterm.action({ ActivateTabRelative = -1 }),
-	-- 	},
-	-- },
+	keys = {
+		{
+			key = "Enter",
+			mods = "SHIFT",
+			action = wezterm.action.SendString("\x1b[13;2u"),
+		},
+		{ key = "c", mods = "CTRL|SHIFT", action = wezterm.action.CopyTo("Clipboard") },
+		{ key = "v", mods = "CTRL|SHIFT", action = wezterm.action.PasteFrom("Clipboard") },
+		{ key = "Tab", mods = "CTRL", action = wezterm.action({ ActivateTabRelative = 1 }) },
+		{
+			key = "Tab",
+			mods = "CTRL|SHIFT",
+			action = wezterm.action({ ActivateTabRelative = -1 }),
+		},
+		{
+			key = "F11",
+			mods = "",
+			action = wezterm.action.ToggleFullScreen,
+		},
+	},
 }
 
 return config

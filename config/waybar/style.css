@@ -3,8 +3,8 @@
     border-radius: 0;
     font-family: JetBrainsMono Nerd Font, Noto Sans CJK;
     font-weight: bold;
-    font-size: 15px;
     min-height: 0;
+    font-size: 15px;
 }
 
 /* Total */
@@ -19,16 +19,38 @@ tooltip {
 /* Left & right part */
 .modules-left, .modules-right {
   background: alpha(@theme_bg_color, 0.6);
-  border-radius: 10px;
-  padding: 0 6px;
+  border-radius: 8px;
+  padding: 0 10px;
   color: @theme_fg_color;
 }
 
+/* Icons */
+#clock,
+#battery,
+#pulseaudio,
+#network,
+/* #bluetooth, */
+/* #temperature, */
+#tray,
+#backlight,
+#cpu,
+#custom-notification {
+    padding: 0px 6px;
+}
+
+/* Clock */
+#clock {
+  color: @BANANA_500;
+}
+
 /* Workspaces indicator */
+#workspaces {
+  margin-left: 5px;
+}
 #workspaces button {
     transition: .3s;
     margin: 4px 0;
-    padding: 0 6px;
+    padding: 0 5px;
     outline: none;
     border-radius: 5px;
     color: @insensitive_fg_color;
@@ -41,44 +63,21 @@ tooltip {
     color: @theme_selected_fg_color;
 }
 
-/* Icons */
-#window,
-#clock,
-#battery,
-#pulseaudio,
-#network,
-#bluetooth,
-/* #temperature, */
-#workspaces,
-#tray,
-#backlight,
-#cpu,
-#custom-notification {
-    padding: 0px 10px;
-}
-
-#temperature.critical {
-    color: #eba0ac;
+#window {
+  color: @theme_text_color;
+  padding: 0 100px;
+  text-shadow: 0px 0px 8px #000000;
 }
 
 /* #tray {
 } */
 
-#workspaces {
-} 
-
-#window {
-    color: @theme_text_color;
-    padding: 0 100px;
-    text-shadow: 0px 0px 8px #000000;
-}
-
-#clock {
-    color: @orange_color;
-}
+/* #temperature.critical {
+color: #eba0ac;
+} */
 
 #network {
-    color: @yellow_color;
+    color: @ORANGE_100;
 }
 
 /* #bluetooth {
@@ -86,21 +85,22 @@ tooltip {
 }  */
 
 #pulseaudio {
-    color: @red_color;
+    color: @STRAWBERRY_100;
 }
 
-#pulseaudio.microphone {
-    color: @purple_color;
+#backlight {
+  color: @BLUEBERRY_100;
+  margin-right: 7px;
 }
+
+/* #pulseaudio.microphone {
+    color: @purple_color;
+} */
 
 #battery {
-    color: @green_color;
+    color: @LIME_100;
 }
 
 /* #cpu {
     color: @red_color;
 } */
-
-#backlight {
-    color: @cyan_color;
-}
