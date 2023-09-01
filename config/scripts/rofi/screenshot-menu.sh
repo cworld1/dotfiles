@@ -17,12 +17,14 @@ if [[ "$layout" == 'NO' ]]; then
 	option_3="󰸉 Shot Desktop"
 	option_4="󱇤 Shot and edit"
 	option_5="󱇸 Shot in 5s"
+	option_6="󰸱 Pick color"
 else
 	option_1="󰆞"
 	option_2="󰆟"
 	option_3="󰸉"
 	option_4="󱇤"
 	option_5="󱇸"
+	option_6="󰸱"
 fi
 
 # Rofi CMD
@@ -36,7 +38,7 @@ rofi_cmd() {
 
 # Pass variables to rofi dmenu
 run_rofi() {
-	echo -e "$option_1\n$option_2\n$option_3\n$option_4\n$option_5" | rofi_cmd
+	echo -e "$option_1\n$option_2\n$option_3\n$option_4\n$option_5\n$option_6" | rofi_cmd
 }
 
 # Screenshot
@@ -52,8 +54,7 @@ fi
 
 # notify and view screenshot
 notify_view() {
-	notify_cmd_shot="notify-send -u low"
-	${notify_cmd_shot} "Copied to clipboard."
+	notify-send -u low "$1"
 }
 
 # countdown
@@ -67,19 +68,19 @@ countdown() {
 # take shots
 shotarea() {
 	sleep 0.5 && grim -g "$(slurp -w 0)" - | wl-copy
-	notify_view
+	notify_view "Selected area copied"
 }
 
 shotwin() {
 	w_pos=$(hyprctl activewindow | grep 'at:' | cut -d':' -f2 | tr -d ' ' | tail -n1)
 	w_size=$(hyprctl activewindow | grep 'size:' | cut -d':' -f2 | tr -d ' ' | tail -n1 | sed s/,/x/g)
 	sleep 0.5 && grim -g "$w_pos $w_size" - | wl-copy
-	notify_view
+	notify_view "Cur window copied"
 }
 
 shotfull() {
 	sleep 0.5 && grim - | wl-copy
-	notify_view
+	notify_view "Cur screen copied"
 }
 
 shot_area_edit() {
@@ -90,6 +91,12 @@ shot_area_edit() {
 shot5() {
 	countdown '5'
 	cd $dir && grim - | tee $file
+	notify_view "File saved"
+}
+
+pic_color() {
+	sleep 0.5 && hyprpicker -a
+	notify_view "Your color copied"
 }
 
 # Execute Command
@@ -104,6 +111,8 @@ run_cmd() {
 		shot_area_edit
 	elif [[ "$1" == '--opt5' ]]; then
 		shot5
+	elif [[ "$1" == '--opt6' ]]; then
+		pic_color
 	fi
 }
 
@@ -124,5 +133,8 @@ $option_4)
 	;;
 $option_5)
 	run_cmd --opt5
+	;;
+$option_6)
+	run_cmd --opt6
 	;;
 esac
