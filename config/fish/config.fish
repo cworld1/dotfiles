@@ -3,52 +3,25 @@ set fish_init_start (date +%s%N)
 
 ### Envs ###
 set -x PATH $PATH $HOME/.local/bin/
-set -x PATH $PATH $HOME/.local/share/pnpm/
-# Set lan and proxy env
 function setenv
-    if [ $argv[1] = PATH ]
-        # Replace colons and spaces with newlines
-        set -gx PATH (echo $argv[2] | tr ': ' \n)
-    else
-        set -gx $argv
-    end
+    set -gx $argv
 end
-source ~/.env
+source ~/.config/shell/envs.sh
 
 ### Alias ###
-# System
-alias :q exit
-alias cls clear
-alias where whereis
-alias rmf "rm -rf"
-alias mkdir 'mkdir -v -p'
-alias paci "sudo pacman -S"
-alias pacr "sudo pacman -R"
-alias pacu "sudo pacman -U"
-# User
-alias l "lsd -A"
-alias ll "lsd -lA"
-alias lt "lsd -A --tree"
-alias py python
-alias v nvim
-alias nvi nvim
-alias jo joshuto
-alias gitfetch onefetch
-alias osfetch neofetch
-alias rg ripgrep
-alias clean~ xdg-ninja
-alias gitc "git clone"
-alias parui "paru -S"
-alias parur "paru -R"
-alias paruc "paru -Yc"
-alias cmc 'cmake . -G "MSYS Makefiles" -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=1'
-alias cmr 'cmake --build build && build/main'
-alias clashr 'systemctl --user restart clash-meta.service'
-alias clashs 'systemctl --user status clash-meta.service'
-alias clashd 'firefox "http://127.0.0.1:9090/ui/#/"'
+function setalias
+    alias $argv
+end
+source ~/.config/shell/alias.sh
 # Abbrs
 abbr -a ... ../..
 abbr -a .... ../../..
+
+### Paths ###
+function setpath
+    set -gx PATH $PATH (echo $argv | tr ': ' \n)
+end
+source ~/.config/shell/paths.sh
 
 ### Local func ###
 # Change greeting with timing
