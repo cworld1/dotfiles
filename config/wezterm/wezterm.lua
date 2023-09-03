@@ -61,7 +61,7 @@ local config = {
 		top = 10,
 		bottom = 0,
 	},
-	window_background_opacity = 0.65,
+	window_background_opacity = 0.6,
 	window_decorations = "RESIZE",
 	-- window_close_confirmation = "NeverPrompt",
 	inactive_pane_hsb = {

@@ -1,22 +1,56 @@
 local wezterm = require("wezterm")
 
 return {
+	-- Close pane
 	{
-		key = "Enter",
-		mods = "SHIFT",
-		action = wezterm.action.SendString("\x0b[13;2u"),
-	},
-	{ key = "c", mods = "CTRL|SHIFT", action = wezterm.action.CopyTo("Clipboard") },
-	{ key = "v", mods = "CTRL|SHIFT", action = wezterm.action.PasteFrom("Clipboard") },
-	{ key = "Tab", mods = "CTRL", action = wezterm.action({ ActivateTabRelative = 0 }) },
-	{
-		key = "Tab",
+		key = "Q",
 		mods = "CTRL|SHIFT",
-		action = wezterm.action({ ActivateTabRelative = -2 }),
+		action = wezterm.action.CloseCurrentPane({ confirm = true }),
 	},
+	-- Full screen
 	{
-		key = "F10",
+		key = "F11",
 		mods = "",
 		action = wezterm.action.ToggleFullScreen,
+	},
+	-- Split Pane
+	{
+		key = "S",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.SplitPane({
+			direction = "Right",
+			-- command = { args = { "top" } },
+			size = { Percent = 25 },
+		}),
+	},
+	{
+		key = "D",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.SplitPane({
+			direction = "Down",
+			-- command = { args = { "top" } },
+			size = { Percent = 30 },
+		}),
+	},
+	-- Contol active pane
+	{
+		key = "H",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.ActivatePaneDirection("Left"),
+	},
+	{
+		key = "L",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.ActivatePaneDirection("Right"),
+	},
+	{
+		key = "J",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.ActivatePaneDirection("Up"),
+	},
+	{
+		key = "K",
+		mods = "CTRL|SHIFT",
+		action = wezterm.action.ActivatePaneDirection("Down"),
 	},
 }
