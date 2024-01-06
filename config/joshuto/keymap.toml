@@ -8,7 +8,6 @@ keymap = [
 
   # Quick start app
   { keys = ["`"], command = "shell fish" },
-  { keys = ["v"], command = "shell nvim ." },
   { keys = ["ctrl+g"], command = "shell lazygit" },
 
   # Bookmarks
