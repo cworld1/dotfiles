@@ -19,17 +19,18 @@ fi
 # go to config home
 cd "$CONFIG_HOME"
 
-# mention the users
-echo "Link: $SCRIPT_PATH -> $CONFIG_HOME"
-read -p "Do you want to continue? [Y/n] " -n 2 -r
-if [[ $REPLY =~ ^[Nn]$ ]]; then
-	exit 1
-fi
-
 # create soft folder links (if exists soft link, overwrite; if exists file, backup)
 echo "Creating links for config files..."
 for file in $SCRIPT_PATH/*; do
 	filename=$(basename "$file")
+
+	# mention the users
+	echo "Link: $file -> $CONFIG_HOME/$filename"
+	read -p "Do you want to continue? [Y/n] " -n 2 -r
+	if [[ $REPLY =~ ^[Nn]$ ]]; then
+		continue
+	fi
+
 	# clean the links
 	if [ -h "$CONFIG_HOME/$filename" ]; then
 		rm "$CONFIG_HOME/$filename"
