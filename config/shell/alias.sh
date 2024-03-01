@@ -1,14 +1,14 @@
 # Customize
 setalias file open # file explorer
 # Proxy
-setalias proxyd 'open -a Safari "http://127.0.0.1:9090/ui/#/"'
-setalias proxyl 'nvim ~/.config/webserver/gfwlist.pac'
+setalias pboard 'open -a Safari "http://127.0.0.1:9090/ui/#/"'
+setalias plist 'nvim ~/.config/webserver/gfwlist.pac'
 # Package manager
-setalias brewi 'brew install'
-setalias brews 'brew search'
-setalias brewf 'brew info'
+setalias binstall 'brew install'
+setalias bsearch 'brew search'
+setalias binfo 'brew info'
 # Cmake
-setalias cmc 'cmake . -G "Unix Makefiles" -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=1'
+setalias cmg 'cmake . -G "Unix Makefiles" -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=1'
 setalias cmr 'cmake --build build && build/main'
 # setalias clean~ xdg-ninja
 
