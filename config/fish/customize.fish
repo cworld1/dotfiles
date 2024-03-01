@@ -1,6 +1,22 @@
-set prompt_prefix "󰣇"
+# Prompt frefix
+set prompt_prefix "󰀵" # command logo
+
 # Proxy
-set hostip $(cat /etc/resolv.conf | grep -oP '(?<=nameserver\ ).*')
+set hostip "127.0.0.1"
+# set hostip $(cat /etc/resolv.conf | grep -oP '(?<=nameserver\ ).*') # for wsl
+
+# Yazi: to change the current working directory when exiting Yazi.
+function ya
+    set tmp (mktemp -t "yazi-cwd.XXXXX")
+    yazi $argv --cwd-file="$tmp"
+    if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+        cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
+end
+
+# Zoxide: quick path jump tool
+zoxide init fish | source
 
 # Venv auto actiavation
 function __auto_source_venv --on-variable PWD --description "Activate/Deactivate virtualenv on directory change"
@@ -19,6 +35,3 @@ function __auto_source_venv --on-variable PWD --description "Activate/Deactivate
         deactivate
     end
 end
-
-# Zoxide: quick path jump tool
-zoxide init fish | source
