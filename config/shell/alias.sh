@@ -1,33 +1,37 @@
 # Customize
 setalias file open # file explorer
-# Proxy
+# Proxy (for macOS)
 setalias pboard 'open -a Safari "http://127.0.0.1:9090/ui/#/"'
-setalias plist 'nvim ~/.config/webserver/gfwlist.pac'
-# Package manager
-setalias binstall 'brew install'
-setalias bsearch 'brew search'
-setalias binfo 'brew info'
+setalias pedit 'nvim ~/.config/webserver/gfwlist.pac'
 # Cmake
 setalias cmg 'cmake . -G "Unix Makefiles" -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=1'
 setalias cmr 'cmake --build build && build/main'
-# setalias clean~ xdg-ninja
 
-# System
-setalias :q exit
-setalias :Q exit
-setalias cls clear
-setalias where whereis
-setalias rmf 'rm -rf'
-setalias mkdir 'mkdir -v -p'
+# Package manager
+# Brew
+setalias brews 'brew search'
+setalias brewi 'brew info'
+setalias brewI 'brew install'
+setalias brewu 'brew update'
+setalias brewU 'brew upgrade'
+setalias brewr 'brew uninstall'
+# Pacman
+# setalias pacs 'sudo pacman -Ss'
+# setalias paci 'sudo pacman -Si'
+# setalias pacI 'sudo pacman -S'
+# setalias pacu 'sudo pacman -Su'
+# setalias pacU 'sudo pacman -Syu'
+# setalias pacr 'sudo pacman -R'
 
 # User
-setalias py python
-setalias jo joshuto
-setalias osfetch neofetch
 setalias wget "wget --hsts-file=\"$XDG_DATA_HOME/wget-hsts\""
+setalias clean~ xdg-ninja
+setalias osfetch neofetch
 # Git
 setalias gitfetch onefetch
-setalias gclone 'git clone'
+setalias gitc 'git clone'
+setalias gitp 'git pull'
+setalias gitP 'git push'
 # Lsd
 setalias l 'lsd -A'
 setalias ll 'lsd -lA'
@@ -37,3 +41,11 @@ setalias v nvim
 setalias nvi nvim
 setalias "v." 'nvim .'
 setalias "v," 'nvim .'
+
+# System
+setalias :q exit
+setalias :Q exit
+setalias cls clear
+setalias where whereis
+setalias rmf 'rm -rf'
+setalias mkdir 'mkdir -v -p'
