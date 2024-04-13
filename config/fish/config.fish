@@ -51,3 +51,8 @@ function pshow
     echo "HTTP proxy : $http_proxy"
     echo "HTTPs proxy: $http_proxy"
 end
+
+# Quick edit (with zoxide & nvim)
+function zv
+    z $argv; and nvim .
+end
