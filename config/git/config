@@ -17,12 +17,10 @@ rebase = false
 # HTTP and proxy
 [http]
 sslBackend = openssl
-# proxy = http://127.0.0.1:7890
+proxy = http://127.0.0.1:7890
 [https]
-# proxy = http://127.0.0.1:7890
+proxy = http://127.0.0.1:7890
 # Credentials
-[credential]
-helper = /usr/lib/git-core/git-credential-libsecret
 [credential "https://dev.azure.com"]
 useHttpPath = true
 [credential "https://gitee.com"]
