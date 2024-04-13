@@ -10,6 +10,10 @@ set hostip "127.0.0.1"
 
 # Zoxide: quick path jump tool
 zoxide init fish | source
+# Quick edit (with zoxide & nvim)
+function zv
+    z $argv; and nvim .
+end
 
 # Fzf integration
 fzf --fish | source
