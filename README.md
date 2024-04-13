@@ -4,14 +4,22 @@ Dotfiles of CWorld.
 
 For Arch Linux dotfiles, check the [`archlinux` branch](https://github.com/cworld1/dotfiles/tree/archlinux) for more.
 
-# Installation
+## Support platform
+
+- macOS (recommend)
+- Windows with msys
+- Universal linux
+
+## Installation
 
 Config files contains configs of the following packages:
 
+- fastfetch
 - fish
 - git
-- joshuto
-- neofetch
+- gitui
+- npm
+- universal shell configs
 - surfingkeys (chrome/edge/firefox plugin)
 - yazi
 
