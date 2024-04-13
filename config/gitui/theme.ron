@@ -1,0 +1,14 @@
+(
+    // Main
+    selection_bg: Some(Rgb(72,79,87)),
+    selection_fg: Some(Rgb(171,186,200)),
+    disabled_fg: Some(Rgb(116,131,145)),
+
+    // bottom command bar
+    command_fg: Some(Rgb(160,186,236)),
+    cmdbar_bg: Some(Rgb(39,55,76)),
+    cmdbar_extra_lines_bg: Some(Rgb(39,55,76)),
+
+    // Git colors
+    diff_file_modified: Some(Rgb(205,144,0)),
+)
