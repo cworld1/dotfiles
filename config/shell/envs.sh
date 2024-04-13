@@ -29,5 +29,7 @@ setenv NPM_CONFIG_USERCONFIG "$XDG_CONFIG_HOME"/npm/npmrc
 setenv PNPM_HOME "$XDG_DATA_HOME"/pnpm
 # Rust (cargo)
 setenv CARGO_HOME "$XDG_DATA_HOME"/cargo
+# Go
+setenv GOPATH "$XDG_DATA_HOME"/go
 # Tldr
 setenv TLDR_CACHE_DIR "$XDG_CACHE_HOME"/tldr

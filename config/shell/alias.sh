@@ -3,9 +3,6 @@ setalias file open # file explorer
 # Proxy (for macOS)
 setalias pboard 'open -a Safari "http://127.0.0.1:9090/ui/#/"'
 setalias pedit 'nvim ~/.config/webserver/gfwlist.pac'
-# Cmake
-setalias cmg 'cmake . -G "Unix Makefiles" -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=1'
-setalias cmr 'cmake --build build && build/main'
 
 # Package manager
 # Brew
@@ -26,16 +23,19 @@ setalias brewr 'brew uninstall'
 # User
 setalias wget "wget --hsts-file=\"$XDG_DATA_HOME/wget-hsts\""
 setalias clean~ xdg-ninja
-setalias osfetch neofetch
-# Git
+setalias osfetch fastfetch
 setalias gitfetch onefetch
+# Cmake
+setalias cmg 'cmake . -G "Unix Makefiles" -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=1'
+setalias cmr 'cmake --build build && build/main'
+# Git
 setalias gitc 'git clone'
 setalias gitp 'git pull'
 setalias gitP 'git push'
 # Lsd
-setalias l 'lsd -A'
-setalias ll 'lsd -lA'
-setalias lt 'lsd -A --tree'
+setalias l 'lsd -A --group-directories-first'
+setalias ll 'lsd -lA --group-directories-first'
+setalias lt 'lsd --tree --group-directories-first'
 # Neovim
 setalias v nvim
 setalias nvi nvim
