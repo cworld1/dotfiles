@@ -10,7 +10,7 @@ For Arch Linux dotfiles, check the [`archlinux` branch](https://github.com/cworl
 - Windows with msys
 - Universal linux
 
-## Installation
+## Support packages
 
 Config files contains configs of the following packages:
 
@@ -25,4 +25,10 @@ Config files contains configs of the following packages:
 
 If you don't want to use any of them, delete it or move to another path from the `config` folder before running `install.sh`.
 
-> `install.sh` will help you create soft link to `$XDG_CONFIG_HOME` or `$HOME/.config`. If there exists conflicts, it will create backups automatically.
+## Installation
+
+```shell
+bash install.sh
+```
+
+> `install.sh` will help you create soft link to `$XDG_CONFIG_HOME` or `$HOME/.config`. If there exists conflicts, it will create backups automatically. You can use `-f` or `--force` to ignore backups.

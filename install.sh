@@ -37,8 +37,13 @@ for file in $SCRIPT_PATH/*; do
 	fi
 	# backup files
 	if [ -e "$CONFIG_HOME/$filename" ]; then
-		mv "$CONFIG_HOME/$filename" "$CONFIG_HOME/$filename.bak"
-		echo "Backup: $CONFIG_HOME/$filename.bak"
+		if [[ $1 == "-f" || $1 == "--force" ]]; then
+			rm -rf "$CONFIG_HOME/$filename"
+			echo "Deleted: $CONFIG_HOME/$filename"
+		else
+			mv "$CONFIG_HOME/$filename" "$CONFIG_HOME/$filename.bak"
+			echo "Backup: $CONFIG_HOME/$filename.bak"
+		fi
 	fi
 	ln -s "$file" "$CONFIG_HOME/$filename"
 done
