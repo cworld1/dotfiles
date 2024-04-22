@@ -12,6 +12,15 @@ setalias brewI 'brew install'
 setalias brewu 'brew update'
 setalias brewU 'brew upgrade'
 setalias brewr 'brew uninstall'
+setalias brewc 'brew clean'
+# Scoop
+setalias scoops 'scoop search'
+setalias scoopi 'scoop info'
+setalias scoopI 'scoop install'
+setalias scoopu 'scoop update'
+setalias scoopU 'scoop update --all'
+setalias scoopr 'scoop uninstall'
+setalias scoopc 'scoop cache rm --all'
 # Pacman
 # setalias pacs 'sudo pacman -Ss'
 # setalias paci 'sudo pacman -Si'
@@ -19,12 +28,18 @@ setalias brewr 'brew uninstall'
 # setalias pacu 'sudo pacman -Su'
 # setalias pacU 'sudo pacman -Syu'
 # setalias pacr 'sudo pacman -R'
+# setalias parus 'paru -Ss'
+# setalias parui 'paru -Si'
+# setalias paruI 'paru -S'
+# setalias paruu 'paru -Su'
+# setalias parur 'paru -R'
 
 # User
 setalias wget 'wget --hsts-file="$XDG_DATA_HOME/wget-hsts"'
 setalias clean~ xdg-ninja
 setalias osfetch fastfetch
 setalias gitfetch onefetch
+setalias tldr 'tldr --config "$XDG_CONFIG_HOME/tldr/config.toml"'
 # Cmake
 setalias cmg 'cmake . -G "Unix Makefiles" -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=1'
 setalias cmr 'cmake --build build && build/main'
