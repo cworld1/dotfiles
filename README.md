@@ -21,6 +21,7 @@ Config files contains configs of the following packages:
 - pip
 - universal shell configs
 - surfingkeys (chrome/edge/firefox plugin)
+- tldr (rust version)
 - yazi
 
 If you don't want to use any of them, delete it or move to another path from the `config` folder before running `install.sh`.
