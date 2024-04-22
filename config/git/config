@@ -24,24 +24,18 @@ safecrlf = true
 
 # ----- Network & Credentials Configurations -----
 [credential]
-    helper =
+# Specific credential helper for windows
+# helper = wincred
+# Specific credential helper for macOS
+helper = osxkeychain
+# Specific credential helper for linux
+# helper = libsecret
 [http]
 # Specify http proxy
 proxy = http://127.0.0.1:7890
 [https]
 # Specify https proxy
 proxy = http://127.0.0.1:7890
-
-[credential]
-# Specific credential helper for windows
-[credential "https://"]
-    helper = wincred
-# Specific credential helper for macOS
-[credential "https://"]
-    helper = osxkeychain
-# Specific credential helper for linux
-[credential "https://"]
-    helper = libsecret
 
 # ----- Pull, Commit & Diff Configurations -----
 [pull]
