@@ -18,7 +18,7 @@ Config files contains configs of the following packages:
 - fish
 - git
 - gitui
-- npm
+- pip
 - universal shell configs
 - surfingkeys (chrome/edge/firefox plugin)
 - yazi
