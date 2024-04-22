@@ -1,51 +1,64 @@
-# ----- Core -----
-[core]
-; autocrlf = true
-fscache = true
-symlinks = true
-editor = nvim
+# ----- User Configurations -----
+[user]
+name = CWorld
+email = cworld0@qq.com
+signingkey = D42B539DC7C62A82
 
-# ----- Basic -----
-# Default branch
+# ----- Editor & Terminal Display -----
+[core]
+editor = nvim
+[color]
+interactive = true
+ui = auto
+
+# ----- Repository Configurations -----
 [init]
 defaultBranch = main
-# Pull method
-[pull]
-rebase = false
+[core]
+# Enable filesystem caching to improve performance, and support symbolic links in git directories
+fscache = true
+symlinks = true
+# Configure line ending conversions, converting to LF on checkin and rejecting if LF and CRLF are mixed.
+autocrlf = input
+safecrlf = true
 
-# ----- Network -----
-# HTTP and proxy
+# ----- Network & Credentials Configurations -----
+[credential]
+    helper =
 [http]
-sslBackend = openssl
+# Specify http proxy
 proxy = http://127.0.0.1:7890
 [https]
+# Specify https proxy
 proxy = http://127.0.0.1:7890
-# Credentials
-[credential "https://dev.azure.com"]
-useHttpPath = true
-[credential "https://gitee.com"]
-provider = generic
-[credential "https://ghproxy.com"]
-provider = generic
 
-# ----- Functions -----
-# Convert files to a text format before generating their diff.
+[credential]
+# Specific credential helper for windows
+[credential "https://"]
+    helper = wincred
+# Specific credential helper for macOS
+[credential "https://"]
+    helper = osxkeychain
+# Specific credential helper for linux
+[credential "https://"]
+    helper = libsecret
+
+# ----- Pull, Commit & Diff Configurations -----
+[pull]
+# When pulling, rebase commits instead of merging
+rebase = true
+[commit]
+# Sign commits with GPG
+gpgsign = true
+[gpg]
+program = gpg
 [diff "astextplain"]
+# For files that the system considers to be text, perform a line-by-line comparison to produce the diff
 textconv = astextplain
-# Large file storage
+
+# ----- Large File Storage Configurations -----
 [filter "lfs"]
 clean = git-lfs clean -- %f
 smudge = git-lfs smudge -- %f
 process = git-lfs filter-process
 required = true
-# GPG Commit
-[commit]
-gpgsign = true
-[gpg]
-program = gpg
-
-# ----- UserConf -----
-[user]
-name = CWorld
-email = cworld0@qq.com
-signingkey = D42B539DC7C62A82
