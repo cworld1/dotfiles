@@ -1,11 +1,4 @@
 ### Local func ###
-# Change greeting with timing
-function fish_greeting
-    # set -l fish_version ()
-    # printf "%s\n" (fish --version)
-end
-# Prompt conf
-set fish_prompt_pwd_dir_length 2
 
 ### Envs ###
 function setenv

@@ -1,4 +1,5 @@
 function fish_prompt --description 'Write out the prompt'
+    set fish_prompt_pwd_dir_length 2
     set -l last_pipestatus $pipestatus
     set -lx __fish_last_status $status # Export for __fish_print_pipestatus.
 
@@ -9,13 +10,13 @@ function fish_prompt --description 'Write out the prompt'
         set -g __fish_git_prompt_hide_untrackedfiles 1
     end
     if not set -q __fish_git_prompt_color_branch
-        set -g __fish_git_prompt_color_branch magenta --bold
+        set -g __fish_git_prompt_color_branch e6b6fc --bold
     end
     if not set -q __fish_git_prompt_showupstream
         set -g __fish_git_prompt_showupstream informative
     end
     if not set -q __fish_git_prompt_color_dirtystate
-        set -g __fish_git_prompt_color_dirtystate blue
+        set -g __fish_git_prompt_color_dirtystate 5cb2ff
     end
     if not set -q __fish_git_prompt_color_stagedstate
         set -g __fish_git_prompt_color_stagedstate yellow

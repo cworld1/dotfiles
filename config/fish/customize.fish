@@ -1,5 +1,5 @@
 # Prompt frefix
-set prompt_prefix "" # command logo
+set prompt_prefix "" # command logo
 # "": macOS     "": Windows  "": Android
 # "": Archlinux "": Fedora   "": Ubuntu
 # "": centOS    "": OpenSUSE

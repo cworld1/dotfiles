@@ -23,13 +23,9 @@ setenv HISTFILE "$XDG_STATE_HOME"/bash/history
 setenv LESSHISTFILE "$XDG_STATE_HOME"/less/history
 # Node
 setenv NODE_REPL_HISTORY "$XDG_DATA_HOME"/node_repl_history
-# NPM
-setenv NPM_CONFIG_USERCONFIG "$XDG_CONFIG_HOME"/npm/npmrc
 # PNPM
 setenv PNPM_HOME "$XDG_DATA_HOME"/pnpm
 # Rust (cargo)
 setenv CARGO_HOME "$XDG_DATA_HOME"/cargo
 # Go
 setenv GOPATH "$XDG_DATA_HOME"/go
-# Tldr
-setenv TLDR_CACHE_DIR "$XDG_CACHE_HOME"/tldr
