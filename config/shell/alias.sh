@@ -1,5 +1,5 @@
 # Customize
-setalias file open # file explorer
+# setalias open explorer # file explorer
 # Proxy (for macOS)
 setalias pboard 'open -a Safari "http://127.0.0.1:9090/ui/#/"'
 setalias pedit 'nvim ~/.config/webserver/gfwlist.pac'
