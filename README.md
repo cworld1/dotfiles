@@ -39,6 +39,7 @@ These packages don't need any configs, but I use it and having a good experience
 - [lsd](https://github.com/lsd-rs/lsd) (rust)
 - [ripgrep](https://github.com/BurntSushi/ripgrep) (rust)
 - [fzf](https://github.com/junegunn/fzf) (go)
+- [onefetch](https://github.com/o2sh/onefetch/) (rust)
 
 ## Installation
 
