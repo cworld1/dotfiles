@@ -4,6 +4,7 @@ set -gx NO_PROXY "localhost,127.0.0.1,localaddress,.localdomain.com"
 set -gx LANG en_US.UTF-8
 set -gx TERM xterm-256color
 set -gx EDITOR nvim
+set -gx GPG_TTY $(tty)
 
 # Prevent trashes on the $HOME directory
 set -gx XDG_RUNTIME_DIR /run/user/$UID
