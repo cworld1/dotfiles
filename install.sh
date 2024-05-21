@@ -30,7 +30,6 @@ function link_directory() {
 	fi
 
 	ln -s "$FILE" "$CONFIG_HOME/$FILENAME"
-	echo "Link: $FILE -> $CONFIG_HOME/$FILENAME"
 }
 
 # get current script path
