@@ -1,22 +1,6 @@
-### Local func ###
-alias unset="set --erase"
 set fish_confs "$XDG_CONFIG_HOME"/fish/confs
-
-### Custom func ###
 source ~/.config/fish/customize.fish
 
-# Proxy
-function pon
-    set -Ux HTTP_PROXY "http://$hostip:7890"
-    set -Ux HTTPS_PROXY $HTTP_PROXY
-    echo "Proxy has been opened."
-end
-function poff
-    set -e HTTP_PROXY
-    set -e HTTPS_PROXY
-    echo "Proxy has been closed."
-end
-function pshow
-    echo "HTTP proxy : $HTTP_PROXY"
-    echo "HTTPs proxy: $HTTP_PROXY"
+if [ -f "$XDG_CONFIG_HOME"/fish/private.fish ]
+    source "$XDG_CONFIG_HOME"/fish/private.fish
 end

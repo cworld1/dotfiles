@@ -18,7 +18,5 @@ set -gx HISTFILE "$XDG_STATE_HOME"/bash/history
 set -gx LESSHISTFILE "$XDG_STATE_HOME"/less/history
 # Node
 set -gx NODE_REPL_HISTORY "$XDG_DATA_HOME"/node_repl_history
-# PNPM
-set -gx PNPM_HOME "$XDG_DATA_HOME"/pnpm
 # Go
 set -gx GOPATH "$XDG_DATA_HOME"/go

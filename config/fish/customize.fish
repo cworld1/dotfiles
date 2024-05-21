@@ -1,5 +1,5 @@
 # Prompt frefix
-set prompt_prefix "" # command logo
+set prompt_prefix "" # command logo
 # "": macOS     "": Windows  "": Android
 # "": Archlinux "": Fedora   "": Ubuntu
 # "": centOS    "": OpenSUSE
@@ -7,7 +7,6 @@ set prompt_prefix "" # command logo
 # Proxy
 set hostip "127.0.0.1"
 # set hostip $(cat /etc/resolv.conf | grep -oP '(?<=nameserver\ ).*') # for wsl
-
 
 # Package manager
 source $fish_confs/homebrew.fish
@@ -27,3 +26,15 @@ source $fish_confs/cmake.fish
 source $fish_confs/pnpm.fish
 source $fish_confs/python.fish
 source $fish_confs/rust.fish
+
+switch (uname)
+    case Linux
+        set -x OSTYPE linux
+    case Darwin
+        set -x OSTYPE macos
+    case 'MSYS_NT*'
+        set -x OSTYPE windows
+        alias open explorer
+    case '*'
+        set -x OSTYPE unknown
+end
