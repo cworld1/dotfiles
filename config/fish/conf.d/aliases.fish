@@ -18,3 +18,4 @@ alias cls clear
 alias clean~ xdg-ninja
 alias osfetch fastfetch
 alias gitfetch onefetch
+alias logfetch git-cliff
