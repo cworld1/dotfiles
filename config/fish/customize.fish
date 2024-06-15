@@ -10,8 +10,8 @@ set hostip "127.0.0.1"
 
 # Package manager
 source $fish_confs/homebrew.fish
-#source ./confs/scoop.fish
-#source ./confs/pacman.fish
+# source $fish_confs/scoop.fish
+#source $fish_confs/pacman.fish
 
 # Cli tools
 source $fish_confs/fzf.fish
