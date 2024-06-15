@@ -22,6 +22,7 @@ source $fish_confs/yazi.fish
 source $fish_confs/zoxide.fish
 
 # Programming
+source $fish_confs/vscode.fish
 source $fish_confs/cmake.fish
 source $fish_confs/pnpm.fish
 source $fish_confs/python.fish
