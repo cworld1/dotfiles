@@ -16,7 +16,7 @@ source $fish_confs/homebrew.fish
 # Cli tools
 source $fish_confs/fzf.fish
 source $fish_confs/git.fish
-source $fish_confs/lsd.fish
+source $fish_confs/eza.fish
 source $fish_confs/nvim.fish
 source $fish_confs/yazi.fish
 source $fish_confs/zoxide.fish
