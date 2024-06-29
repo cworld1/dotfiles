@@ -19,6 +19,7 @@ Config files contains configs of the following packages:
 - [git](https://github.com/git/git) (c)
 - [lazygit](https://github.com/jesseduffield/lazygit) (go)
 - [pip](https://github.com/pypa/pip) (python)
+- [python](https://github.com/python/cpython) (python)
 - surfingkeys (chrome/edge/firefox plugin)
 - [yazi](https://github.com/sxyazi/yazi) (rust)
 
@@ -31,7 +32,6 @@ Extra fish shell configs for:
 - [neovim](https://github.com/neovim/neovim) (vimscript)
 - [pacman](https://gitlab.archlinux.org/pacman/pacman) (c)
 - [pnpm](https://github.com/pnpm/pnpm) (typescript)
-- [python](https://github.com/python/cpython) (python)
 - [rust](https://github.com/rust-lang/rust) (rust)
 - [scoop](https://github.com/ScoopInstaller/Scoop) (powershell)
 - [vscode](https://github.com/microsoft/vscode) (typescript)
