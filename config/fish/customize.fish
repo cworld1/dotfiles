@@ -9,24 +9,27 @@ set hostip "127.0.0.1"
 # set hostip $(cat /etc/resolv.conf | grep -oP '(?<=nameserver\ ).*') # for wsl
 
 # Package manager
-source $fish_confs/homebrew.fish
+source $fish_confs/pacman.fish
 # source $fish_confs/scoop.fish
-#source $fish_confs/pacman.fish
+# source $fish_confs/homebrew.fish
+
+# Programming
+source $fish_confs/git.fish
+source $fish_confs/vscode.fish
+source $fish_confs/nvim.fish
+
+# Languages
+source $fish_confs/cmake.fish
+source $fish_confs/rust.fish
+source $fish_confs/pnpm.fish
+source $fish_confs/python.fish
 
 # Cli tools
 source $fish_confs/fzf.fish
-source $fish_confs/git.fish
 source $fish_confs/eza.fish
-source $fish_confs/nvim.fish
+source $fish_confs/podman.fish
 source $fish_confs/yazi.fish
 source $fish_confs/zoxide.fish
-
-# Programming
-source $fish_confs/vscode.fish
-source $fish_confs/cmake.fish
-source $fish_confs/pnpm.fish
-source $fish_confs/python.fish
-source $fish_confs/rust.fish
 
 switch (uname)
     case Linux
