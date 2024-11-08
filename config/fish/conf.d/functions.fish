@@ -1,6 +1,6 @@
 # Proxy
 function pon
-    set -Ux HTTP_PROXY "http://$hostip:7890"
+    set -Ux HTTP_PROXY "$proxy"
     set -Ux HTTPS_PROXY $HTTP_PROXY
     echo "Proxy has been opened."
 end

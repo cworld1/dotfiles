@@ -5,8 +5,8 @@ set prompt_prefix "" # command logo
 # "": centOS    "": OpenSUSE
 
 # Proxy
-set hostip "127.0.0.1"
-# set hostip $(cat /etc/resolv.conf | grep -oP '(?<=nameserver\ ).*') # for wsl
+set proxy "http://127.0.0.1:7890"
+# set proxy $(cat /etc/resolv.conf | grep -oP '(?<=nameserver\ ).*'):7890 # for wsl
 
 # Package manager
 source $fish_confs/pacman.fish
