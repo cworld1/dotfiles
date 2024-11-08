@@ -1,10 +1,10 @@
-function yy # to change the current working directory when exiting yazi
-    set tmp (mktemp -t "yazi-cwd.XXXXX")
-    yazi $argv --cwd-file="$tmp"
-    if set cwd (cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-        cd -- "$cwd"
-    end
-    rm -f -- "$tmp"
+function y
+	set tmp (mktemp -t "yazi-cwd.XXXXXX")
+	yazi $argv --cwd-file="$tmp"
+	if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+		builtin cd -- "$cwd"
+	end
+	rm -f -- "$tmp"
 end
 
 complete -c yazi -l cwd-file -d 'Write the cwd on exit to this file' -r -F
