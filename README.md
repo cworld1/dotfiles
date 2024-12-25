@@ -56,7 +56,10 @@ These packages don't need any configs, but I use it and having a good experience
 ## Installation
 
 ```shell
+# For macOS or Linux
 bash install.sh
+# For Windows
+pwsh install.ps1
 ```
 
 > `install.sh` will help you create soft link to `$XDG_CONFIG_HOME` or `$HOME/.config`. If there exists conflicts, it will create backups automatically.
