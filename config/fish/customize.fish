@@ -8,6 +8,9 @@ set prompt_prefix "" # command logo
 set proxy "http://127.0.0.1:7890"
 # set proxy $(cat /etc/resolv.conf | grep -oP '(?<=nameserver\ ).*'):7890 # for wsl
 
+# Fish enable vi mode
+source $fish_confs/vi_mode.fish
+
 # Package manager
 source $fish_confs/pacman.fish
 # source $fish_confs/scoop.fish
