@@ -20,8 +20,9 @@ Config files contains configs of the following packages:
 - [lazygit](https://github.com/jesseduffield/lazygit) (go)
 - [pip](https://github.com/pypa/pip) (python)
 - [python](https://github.com/python/cpython) (python)
-- surfingkeys (chrome/edge/firefox plugin)
 - [yazi](https://github.com/sxyazi/yazi) (rust)
+- [zellij](https://github.com/zellij-org/zellij) ([zjstatus](https://github.com/dj95/zjstatus)) (rust)
+- surfingkeys (chrome/edge/firefox plugin)
 
 Extra fish shell configs for:
 
