@@ -10,11 +10,10 @@ layout {
 		format_left  "#[fg=$main]{mode}"
 		format_right "{tabs} #[fg=$info]{session}"
                 format_space ""
-
                 hide_frame_for_single_pane "true"
 
-                mode_normal  "{name} #[fg=$hint]g-Lock p-Pane t-Tab n-Resize h-Move s-Scroll o-Session"
-                mode_pane    "{name} #[fg=$hint] e-Embed d-Down (a/n-New r-Rename x-Close Float: an-New af-Float)"
+                mode_normal  "{name} #[fg=$hint]g-Lock p-Pane t-Tab n-Resize e-Move s-Scroll o-Session"
+                mode_pane    "{name} #[fg=$hint]e-Embed d-Down (a/n-New r-Rename x-Close Float: an-New af-Float)"
                 mode_tab     "{name} #[fg=$hint]b-Break (a/n-New r-Rename x-Close)"
                 mode_resize  "{name} #[fg=$hint]"
                 mode_move    "{name} #[fg=$hint]"
