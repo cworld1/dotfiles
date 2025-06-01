@@ -12,28 +12,28 @@ set proxy "http://127.0.0.1:7890"
 source $fish_confs/vi_mode.fish
 
 # Package manager
-source $fish_confs/pacman.fish
+# source $fish_confs/pacman.fish
 # source $fish_confs/scoop.fish
 # source $fish_confs/homebrew.fish
 
 # Programming
 source $fish_confs/git.fish
-source $fish_confs/vscode.fish
+# source $fish_confs/vscode.fish
 source $fish_confs/nvim.fish
 
 # Languages
-source $fish_confs/cmake.fish
-source $fish_confs/rust.fish
-source $fish_confs/pnpm.fish
-source $fish_confs/python.fish
+# source $fish_confs/cmake.fish
+# source $fish_confs/rust.fish
+# source $fish_confs/pnpm.fish
+# source $fish_confs/python.fish
 
 # Cli tools
-source $fish_confs/fzf.fish
-source $fish_confs/eza.fish
-source $fish_confs/pass.fish
-source $fish_confs/podman.fish
-source $fish_confs/yazi.fish
-source $fish_confs/zoxide.fish
+# source $fish_confs/fzf.fish
+# source $fish_confs/eza.fish
+# source $fish_confs/pass.fish
+# source $fish_confs/podman.fish
+# source $fish_confs/yazi.fish
+# source $fish_confs/zoxide.fish
 
 switch (uname)
     case Linux

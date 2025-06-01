@@ -1,7 +1,7 @@
 alias scoops 'scoop search'
 alias scoopi 'scoop info'
 alias scoopI 'scoop install'
-alias scoopu 'scoop update'
+alias scoopu 'scoop update && scoop status'
 alias scoopU 'scoop update --all'
 alias scoopr 'scoop uninstall'
 alias scoopc 'scoop cache rm --all'
