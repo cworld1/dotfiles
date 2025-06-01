@@ -42,10 +42,10 @@ safecrlf = true
 # ----- Networks -----
 [http]
 # Specify http proxy
-# proxy = http://127.0.0.1:7890
+proxy = http://127.0.0.1:7890
 [https]
 # Specify https proxy
-# proxy = http://127.0.0.1:7890
+proxy = http://127.0.0.1:7890
 
 # ----- Pull, Commit & Diff Configurations -----
 [pull]
