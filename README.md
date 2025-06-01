@@ -19,10 +19,11 @@ Config files contains configs of the following packages:
 - [git](https://github.com/git/git) (c)
 - [lazygit](https://github.com/jesseduffield/lazygit) (go)
 - [pip](https://github.com/pypa/pip) (python)
+- [podman](https://github.com/containers/podman) (go)
 - [python](https://github.com/python/cpython) (python)
+- [surfingkeys](https://github.com/brookhong/Surfingkeys) (chrome/edge/firefox plugin)
 - [yazi](https://github.com/sxyazi/yazi) (rust)
 - [zellij](https://github.com/zellij-org/zellij) ([zjstatus](https://github.com/dj95/zjstatus)) (rust)
-- surfingkeys (chrome/edge/firefox plugin)
 
 Extra fish shell configs for:
 
@@ -49,7 +50,6 @@ Config of [neovim](https://github.com/neovim/neovim) config is a little complex.
 
 These packages don't need any configs, but I use it and having a good experiences.
 
-- [fastfetch](https://github.com/fastfetch-cli/fastfetch) (c)
 - [onefetch](https://github.com/o2sh/onefetch/) (rust)
 - [ripgrep](https://github.com/BurntSushi/ripgrep) (rust)
 - [tldr](https://github.com/isacikgoz/tldr) (go interactive version)
@@ -61,6 +61,9 @@ These packages don't need any configs, but I use it and having a good experience
 bash install.sh
 # For Windows
 pwsh install.ps1
+
+# Or only link the specific directory
+bash install.sh fish
 ```
 
 > `install.sh` will help you create soft link to `$XDG_CONFIG_HOME` or `$HOME/.config`. If there exists conflicts, it will create backups automatically.
