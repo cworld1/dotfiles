@@ -1,68 +1,105 @@
-# ----- User Configurations -----
-[user]
-name = CWorld
-email = cworld0@qq.com
-signingkey = D42B539DC7C62A82
+# ----- Networks -----
+[http]
+  proxy = http://127.0.0.1:7890
+[https]
+  proxy = http://127.0.0.1:7890
 
-# ----- Editor & Terminal Display -----
-[core]
-editor = nvim
-[color]
-interactive = true
-ui = auto
-
-# ----- Repository Configurations -----
-[init]
-defaultBranch = main
-[core]
-# Enable filesystem caching to improve performance, and support symbolic links in git directories
-fscache = true
-symlinks = true
-# Configure line ending conversions, converting to LF on checkin and rejecting if LF and CRLF are mixed.
-autocrlf = input
-safecrlf = true
-
-# ----- Credentials Configurations -----
+# ----- Credentials -----
 [credential]
 ### For Windows
-# helper = manager
-# [credential "helperselector"]
-# selected = manager
+  # helper = manager
+  # [credential "helperselector"]
+  # selected = manager
 ### For macOS
-# helper = osxkeychain
+  # helper = osxkeychain
 ### For Linux UI
-# helper = libsecret
+  # helper = libsecret
 ### For Linux Cli
-# helper = /usr/local/bin/git-credential-manager
-# credentialStore = gpg
+  helper = git-credential-manager
+  credentialStore = gpg
 ### Generics
 [credential "https://dev.azure.com"]
 	useHttpPath = true
 
-# ----- Networks -----
-[http]
-# Specify http proxy
-proxy = http://127.0.0.1:7890
-[https]
-# Specify https proxy
-proxy = http://127.0.0.1:7890
+# ----- User -----
+[user]
+  name = CWorld
+  email = cworld0@qq.com
+  signingkey = D42B539DC7C62A82
 
-# ----- Pull, Commit & Diff Configurations -----
-[pull]
-# When pulling, rebase commits instead of merging
-rebase = true
-[commit]
-# Sign commits with GPG
-gpgsign = true
+# ----- Display -----
+[color]
+  interactive = true
+[column]
+  ui = auto
+
+# ----- Manipulator -----
+[init]
+  defaultBranch = main
+[core]
+  editor = nvim
+  # Enable filesystem caching to improve performance,
+  # and support symbolic links in git directories
+  fscache = true
+  symlinks = true
+  # Configure line ending conversions, converting
+  # to LF on checkin and rejecting if LF and CRLF are mixed.
+  autocrlf = input
+  safecrlf = true
 [gpg]
-program = gpg
+  program = gpg
+[help]
+  autocorrect = prompt
+
+# ----- Functions -----
+[pull]
+  # When pulling, rebase commits instead of merging
+  rebase = true
+[push]
+  # Push the current branch with the same name on the remote
+  # https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushdefault
+  default = simple # (default since 2.0)
+  # Automatically fix problem "The current branch my-branch-name has no upstream branch."
+  autoSetupRemote = true
+  # Automatically run "git push --tags"
+  followTags = true
+[commit]
+  # Put the whole diff output in verbose commit for you
+  # to reference as you write your message
+  verbose = true
+  # Sign commits with GPG
+  gpgsign = true
+[branch]
+  sort = -committerdate # sort by committer date
+[tag]
+  # Treating dotted version numbers as a series of integer values for sorting purposes
+  sort = version:refname
+[rebase]
+  # take stacked refs in a branch and makes sure
+  # they're also moved when a branch is rebased.
+  updateRefs = true
+[rerere]
+  # Make sure it records the before and after states of rebase conflicts
+  enabled = true
+  # Automatically re-apply the resolutions if it sees them again
+  autoupdate = true
+[diff]
+  # Use incremental improvement on ‘patience’, rather than the default of 'myers'
+  # https://blog.gitbutler.com/how-git-core-devs-configure-git/#better-diff
+  algorithm = histogram
+  # show code movement in different colors then added and removed lines.
+  colorMoved = plain
+  # replace the diff header output with where the diff is coming from
+  mnemonicPrefix = true
+  renames = true
 [diff "astextplain"]
-# For files that the system considers to be text, perform a line-by-line comparison to produce the diff
-textconv = astextplain
+  # For files that the system considers to be text,
+  # perform a line-by-line comparison to produce the diff
+  textconv = astextplain
 
 # ----- Large File Storage Configurations -----
 [filter "lfs"]
-clean = git-lfs clean -- %f
-smudge = git-lfs smudge -- %f
-process = git-lfs filter-process
-required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+  process = git-lfs filter-process
+  required = true
