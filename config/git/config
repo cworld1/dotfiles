@@ -30,8 +30,11 @@ safecrlf = true
 # selected = manager
 ### For macOS
 # helper = osxkeychain
-### For Linux
+### For Linux UI
 # helper = libsecret
+### For Linux Cli
+# helper = /usr/local/bin/git-credential-manager
+# credentialStore = gpg
 ### Generics
 [credential "https://dev.azure.com"]
 	useHttpPath = true
