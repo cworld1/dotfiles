@@ -8,15 +8,14 @@
 [credential]
 ### For Windows
   # helper = manager
-  # [credential "helperselector"]
-  # selected = manager
+	# credentialStore = wincredman
 ### For macOS
   # helper = osxkeychain
 ### For Linux UI
   # helper = libsecret
 ### For Linux Cli
-  helper = git-credential-manager
-  credentialStore = gpg
+  # helper = git-credential-manager
+  # credentialStore = gpg
 ### Generics
 [credential "https://dev.azure.com"]
 	useHttpPath = true
