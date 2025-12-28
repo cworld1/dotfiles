@@ -71,7 +71,7 @@ if ($Directory) {
 if (-not $SingleDir) {
     Get-ChildItem -Path $ScriptPath -Directory | ForEach-Object {
         $D = $_.FullName
-        # Write-Host "Link: $D -> $ConfigHome\$($_.Name)"
+        Write-Host "Link: $D -> $ConfigHome\$($_.Name)"
         $Reply = Read-Host "Do you want to continue? [Y/n]"
         if ($Reply -eq 'N' -or $Reply -eq 'n') {
             return
