@@ -1,0 +1,28 @@
+#:schema https://docs.jj-vcs.dev/latest/config-schema.json
+
+[user]
+name = "CWorld"
+email = "cworld0@qq.com"
+
+[ui]
+default-command = ["log", "--limit", "8"]
+show-cryptographic-signatures = true
+[template-aliases]
+'format_short_id(id)' = 'id.shortest(7)'
+'format_timestamp(timestamp)' = 'timestamp.ago()'
+'format_short_signature(signature)' = 'signature.name()'
+
+[git]
+private-commits = "empty()"
+[signing]
+behavior = "own"
+backend = "gpg"
+[working-copy]
+eol-conversation = "input"
+[remotes.origin]
+auto-track-bookmarks = "glob:*"
+
+[aliases]
+# tm: move the current bookmark to the closest pushable commit
+tm = [ "bookmark", "move", "--from", "heads(::@ & bookmarks())",
+  "-to","closest_pushable(@)"]

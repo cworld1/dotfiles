@@ -18,6 +18,7 @@ Config files contains configs of the following packages:
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch) (c)
 - [fish](https://github.com/fish-shell/fish-shell) (rust)
 - [git](https://github.com/git/git) (c)
+- [jj](https://www.jj-vcs.dev/latest/) (rust)
 - [pip](https://github.com/pypa/pip) (python)
 - [python](https://github.com/python/cpython) (python)
 - [surfingkeys](https://github.com/brookhong/Surfingkeys) (chrome/edge/firefox plugin)
