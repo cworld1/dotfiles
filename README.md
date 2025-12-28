@@ -14,35 +14,42 @@ For Arch Linux dotfiles, check the [`archlinux` branch](https://github.com/cworl
 
 Config files contains configs of the following packages:
 
+- [podman](https://github.com/containers/podman) (go)
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch) (c)
 - [fish](https://github.com/fish-shell/fish-shell) (rust)
 - [git](https://github.com/git/git) (c)
-- [lazygit](https://github.com/jesseduffield/lazygit) (go)
 - [pip](https://github.com/pypa/pip) (python)
-- [podman](https://github.com/containers/podman) (go)
 - [python](https://github.com/python/cpython) (python)
 - [surfingkeys](https://github.com/brookhong/Surfingkeys) (chrome/edge/firefox plugin)
 - [yazi](https://github.com/sxyazi/yazi) (rust)
 - [zellij](https://github.com/zellij-org/zellij) ([zjstatus](https://github.com/dj95/zjstatus)) (rust)
+
+If you don't want to use any of them, just skip creating link to it.
+
+- Delete it or move to another path from the `config` folder before running `install.sh`.
 
 Extra fish shell configs for:
 
 - [cmake](https://github.com/Kitware/CMake) (c)
 - [eza](https://github.com/eza-community/eza) (rust)
 - [fzf](https://github.com/junegunn/fzf) (go)
+- [git](https://github.com/git/git) (c)
 - [homebrew](https://github.com/Homebrew/brew) (ruby)
+- [jj](https://www.jj-vcs.dev/latest/) (rust)
 - [neovim](https://github.com/neovim/neovim) (vimscript)
 - [pacman](https://gitlab.archlinux.org/pacman/pacman) (c)
+- pass
 - [pnpm](https://github.com/pnpm/pnpm) (typescript)
+- [podman](https://github.com/containers/podman) (go)
+- [python](https://github.com/python/cpython) (python)
 - [rust](https://github.com/rust-lang/rust) (rust)
 - [scoop](https://github.com/ScoopInstaller/Scoop) (powershell)
 - [vscode](https://github.com/microsoft/vscode) (typescript)
+- [yazi](https://github.com/sxyazi/yazi) (rust)
+- [zellij](https://github.com/zellij-org/zellij) ([zjstatus](https://github.com/dj95/zjstatus)) (rust)
 - [zoxide](https://github.com/ajeetdsouza/zoxide) (rust)
 
-If you don't want to use any of them:
-
-- Delete it or move to another path from the `config` folder before running `install.sh`.
-- Or just skip creating link to it.
+You can enable them by uncomment line in `<fishconfig>/custom.fish`.
 
 ## Recommend packages
 
