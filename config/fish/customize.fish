@@ -4,7 +4,6 @@ set prompt_prefix "" # command logo
 # "": macOS     "": Windows  "": Android
 # "": Archlinux "": Fedora   "": Ubuntu
 # "": centOS    "": OpenSUSE
-
 # Proxy
 set proxy "http://127.0.0.1:7890"
 # set proxy $(cat /etc/resolv.conf | grep -oP '(?<=nameserver\ ).*'):7890 # for wsl
