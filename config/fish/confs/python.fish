@@ -17,3 +17,9 @@ function __auto_source_venv --on-variable PWD --description "Activate/Deactivate
         deactivate
     end
 end
+
+# Alias for python server
+function pyserve
+    set -l p (test (count $argv) -eq 1 && echo $argv[1] || echo 8000)
+    command -q python3 && python3 -m http.server $p || python -m http.server $p
+end
