@@ -102,3 +102,15 @@
   smudge = git-lfs smudge -- %f
   process = git-lfs filter-process
   required = true
+
+# ----- Alias -----
+[alias]
+  deinit = "!f() { \
+    GIT_ROOT=$(git rev-parse --show-toplevel 2>/dev/null); \
+    if [ -z \"$GIT_ROOT\" ]; then \
+      echo 'Error: not inside a Git repository.' >&2; exit 1; \
+    fi; \
+    echo \"Removing .git from $GIT_ROOT...\"; \
+    rm -rf \"$GIT_ROOT/.git\"; \
+    echo 'Git de‑initialized.'; \
+  }; f"
