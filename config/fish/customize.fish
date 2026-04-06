@@ -33,7 +33,6 @@ source $fish_confs/nvim.fish
 # Cli tools
 # source $fish_confs/fzf.fish
 # source $fish_confs/eza.fish
-# source $fish_confs/pass.fish
 # source $fish_confs/podman.fish
 # source $fish_confs/yazi.fish
 # source $fish_confs/zoxide.fish

@@ -6,6 +6,7 @@ set -gx TERM xterm-256color
 set -gx EDITOR nvim
 set -gx GPG_TTY $(tty)
 set -gx UID $(id -u)
+set -gx SHELL fish
 
 # Prevent trashes on the $HOME directory
 set -gx XDG_RUNTIME_DIR /run/user/$UID
@@ -18,7 +19,13 @@ set -gx XDG_STATE_HOME $HOME/.local/state
 set -gx HISTFILE "$XDG_STATE_HOME"/bash/history
 # Less
 set -gx LESSHISTFILE "$XDG_STATE_HOME"/less/history
-# Node
-set -gx NODE_REPL_HISTORY "$XDG_DATA_HOME"/node_repl_history
+# Bash
+set -gx HISTFILE "$XDG_STATE_HOME"/bash/history
 # Go
 set -gx GOPATH "$XDG_DATA_HOME"/go
+# Pass
+set -gx PASSWORD_STORE_DIR "$XDG_DATA_HOME"/password-store
+# Node
+set -gx NODE_REPL_HISTORY "$XDG_DATA_HOME"/node_repl_history
+# Npm
+set -gx NPM_CONFIG_USERCONFIG "$XDG_CONFIG_HOME"/npm/npmrc
