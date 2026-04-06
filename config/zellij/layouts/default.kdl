@@ -18,7 +18,7 @@ layout {
                 mode_resize  "{name} #[fg=$hint](a-/+-Resize)"
                 mode_move    "{name} #[fg=$hint]"
                 mode_scroll  "{name} #[fg=$hint]s-Search d/u-Scroll e-Edit"
-                mode_session "{name} #[fg=$hint]w-Manage p-Plugin c-Config a-About d-Detach"
+                mode_session "{name} #[fg=$hint]w-Manage p-Plugin c-Config a-About d-Detach s-Share"
                 mode_locked  "#[fg=#f38ba8]{name} #[fg=$hint]g-Lock"
 
                 tab_normal   " #[fg=#585b70]{name}"
