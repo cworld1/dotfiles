@@ -37,6 +37,7 @@ source $fish_confs/nvim.fish
 # source $fish_confs/yazi.fish
 # source $fish_confs/zoxide.fish
 # source $fish_confs/jj.fish
+# source $fish_confs/android.fish
 
 # [Others] sys detect
 switch (uname)
