@@ -16,6 +16,7 @@ source $fish_confs/vi_mode.fish
 # Package manager
 # source $fish_confs/pacman.fish
 # source $fish_confs/scoop.fish
+# source $fish_confs/pacman.fish msys # msys version
 # source $fish_confs/homebrew.fish
 # source $fish_confs/zerobrew.fish
 
