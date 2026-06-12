@@ -13,3 +13,5 @@ complete -c yazi -l clear-cache -d 'Clear the cache directory'
 complete -c yazi -l debug -d 'Print debug information'
 complete -c yazi -s V -l version -d 'Print version'
 complete -c yazi -s h -l help -d 'Print help'
+
+export YAZI_CONFIG_HOME="$XDG_CONFIG_HOME"/yazi
