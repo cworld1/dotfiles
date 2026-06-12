@@ -1,2 +1,8 @@
 [mgr]
 sort_dir_first=true
+
+[opener]
+edit = [
+	{ run = "$EDITOR %s", block = true, for = "unix" },
+	{ run = "%EDITOR% %s", block = true, for = "windows" },
+]
