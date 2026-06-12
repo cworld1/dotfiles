@@ -1,7 +1,8 @@
 alias g git
 # Clone
 alias gcl 'git clone'
-alias gcls 'git clone --recurse-submodules'
+alias gclm 'git clone --recurse-submodules'
+alias gcls 'git clone --depth 1 --single-branch'
 # Status & add & reset
 alias gs 'git status'
 alias ga 'git add --verbose'
