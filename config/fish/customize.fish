@@ -40,6 +40,9 @@ source $fish_confs/nvim.fish
 # source $fish_confs/jj.fish
 # source $fish_confs/android.fish
 
+# Quick actions
+# source $fish_confs/pb.fish
+
 # [Others] sys detect
 switch (uname)
   case Linux
