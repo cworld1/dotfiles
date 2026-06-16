@@ -1,3 +1,12 @@
+function to_win_path --argument path
+  if string match -r -q '^/[a-z]/' $path
+    set drive (string sub -s 2 -l 1 $path | string upper)
+    set rest (string sub -s 4 $path)
+    set p "$drive:/$rest"
+  end
+  echo $p
+end
+
 ## Files
 alias open explorer
 function trash --description "Move files or folders to Windows Recycle Bin"
@@ -11,14 +20,6 @@ end
 # Clipboard
 alias copy clip
 alias paste 'powershell get-clipboard'
-function to_win_path --argument path
-  if string match -r -q '^/[a-z]/' $path
-    set drive (string sub -s 2 -l 1 $path | string upper)
-    set rest (string sub -s 4 $path)
-    set p "$drive:/$rest"
-  end
-  echo $p
-end
 
 ## System actions
 alias poweroff 'shutdown /s /t 0'
