@@ -1,9 +1,9 @@
-alias zbi 'zb info'
-alias zbI 'zb install'
-alias zbu 'zb update'
-alias zbU 'zb upgrade'
-alias zbr 'zb uninstall'
-alias zbc 'zb gc'
+abbr -a zbi 'zb info'
+abbr -a zbI 'zb install'
+abbr -a zbu 'zb update'
+abbr -a zbU 'zb upgrade'
+abbr -a zbr 'zb uninstall'
+abbr -a zbc 'zb gc'
 
 # >>> zerobrew >>>
 # zerobrew

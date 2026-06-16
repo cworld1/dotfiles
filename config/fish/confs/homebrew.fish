@@ -5,10 +5,10 @@ set -gx HOMEBREW_BOTTLE_DOMAIN "https://mirrors.bfsu.edu.cn/homebrew-bottles"
 set -gx HOMEBREW_PIP_INDEX_URL "https://mirrors.bfsu.edu.cn/pypi/web/simple"
 set -gx HOMEBREW_PORTABLE_RUBY_URL "https://mirrors.bfsu.edu.cn/homebrew-bottles/bottles-portable-ruby"  
 
-alias brews 'brew search'
-alias brewi 'brew info'
-alias brewI 'brew install'
-alias brewu 'brew update'
-alias brewU 'brew upgrade'
-alias brewr 'brew uninstall'
-alias brewc 'brew cleanup'
+abbr -a brews 'brew search'
+abbr -a brewi 'brew info'
+abbr -a brewI 'brew install'
+abbr -a brewu 'brew update'
+abbr -a brewU 'brew upgrade'
+abbr -a brewr 'brew uninstall'
+abbr -a brewc 'brew cleanup'

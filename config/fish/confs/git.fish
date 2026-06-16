@@ -1,44 +1,44 @@
-alias g git
+abbr -a g git
 # Clone
-alias gcl 'git clone'
-alias gclm 'git clone --recurse-submodules'
-alias gcls 'git clone --depth 1 --single-branch'
+abbr -a gcl 'git clone'
+abbr -a gclm 'git clone --recurse-submodules'
+abbr -a gcls 'git clone --depth 1 --single-branch'
 # Status & add & reset
-alias gs 'git status'
-alias ga 'git add --verbose'
-alias gaa 'git add --all'
-alias gr 'git reset'
-alias grh 'git reset --hard'
-alias grs 'git restore --staged'
+abbr -a gs 'git status'
+abbr -a ga 'git add --verbose'
+abbr -a gaa 'git add --all'
+abbr -a gr 'git reset'
+abbr -a grh 'git reset --hard'
+abbr -a grs 'git restore --staged'
 # Commit
-alias gc 'git commit --verbose'
-alias gcmsg 'git commit -m'
-alias gc! 'git commit --amend --verbose'
+abbr -a gc 'git commit --verbose'
+abbr -a gcmsg 'git commit -m'
+abbr -a gc! 'git commit --amend --verbose'
 # Branch & checkout
-alias gb 'git branch --all --verbose'
-alias gC 'git checkout'
-alias gCm 'git checkout main'
-alias gCd 'git checkout dev'
+abbr -a gb 'git branch --all --verbose'
+abbr -a gC 'git checkout'
+abbr -a gCm 'git checkout main'
+abbr -a gCd 'git checkout dev'
 # Remote
-alias gf 'git fetch'
-alias gfa 'git fetch --all --prune'
-alias gp 'git pull --rebase'
-alias gP 'git push'
+abbr -a gf 'git fetch'
+abbr -a gfa 'git fetch --all --prune'
+abbr -a gp 'git pull --rebase'
+abbr -a gP 'git push'
 # Inspect
-alias gl 'git log --stat'
-alias glg="git log --graph --abbrev-commit --decorate \
+abbr -a gl 'git log --stat'
+abbr -a glg "git log --graph --abbrev-commit --decorate \
 --format=format:'%C(bold blue)%h%C(reset) -%C(bold yellow)%d%C(reset) \
 %C(white)%s%C(reset) %C(bold green)(%ar)%C(reset) \
 %C(dim white)- %an%C(reset)' --all"
-alias gsh 'git show'
-alias gd 'git diff'
+abbr -a gsh 'git show'
+abbr -a gd 'git diff'
 # Merge & rebase
-alias grb 'git rebase'
-alias gm 'git merge'
-alias gcp 'git cherry-pick'
+abbr -a grb 'git rebase'
+abbr -a gm 'git merge'
+abbr -a gcp 'git cherry-pick'
 # Stash
-alias gst 'git stash'
-alias gsta 'git stash push'
-alias gstp 'git stash pop'
-alias gstl 'git stash list'
-alias gstd 'git stash drop'
+abbr -a gst 'git stash'
+abbr -a gsta 'git stash push'
+abbr -a gstp 'git stash pop'
+abbr -a gstl 'git stash list'
+abbr -a gstd 'git stash drop'
