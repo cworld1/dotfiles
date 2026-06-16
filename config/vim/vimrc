@@ -1,0 +1,3 @@
+" new support of vim xdg rules
+" https://github.com/vim/vim/issues/19399
+source $VIMRUNTIME/xdg.vim
