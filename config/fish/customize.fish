@@ -27,15 +27,12 @@ source $fish_confs/nvim.fish
 # source $fish_confs/python.fish
 # source $fish_confs/cmake.fish
 # source $fish_confs/rust.fish
-# source $fish_confs/pnpm.fish
-# source $fish_confs/python.fish
 
 # Cli tools
 # source $fish_confs/fzf.fish
 # source $fish_confs/eza.fish
 # source $fish_confs/yazi.fish
 # source $fish_confs/zoxide.fish
-# source $fish_confs/jj.fish
 # source $fish_confs/android.fish
 # source $fish_confs/podman.fish
 
