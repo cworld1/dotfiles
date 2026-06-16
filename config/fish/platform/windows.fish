@@ -7,7 +7,7 @@ function to_win_path --argument path
   echo $p
 end
 
-## Files
+# Files
 alias open explorer
 function trash --description "Move files or folders to Windows Recycle Bin"
   for item in $argv
@@ -21,7 +21,7 @@ end
 alias copy clip
 alias paste 'powershell get-clipboard'
 
-## System actions
+# System actions
 alias poweroff 'shutdown /s /t 0'
 alias reboot 'shutdown /r /t 0'
 alias lock 'rundll32 user32.dll,LockWorkStation'
