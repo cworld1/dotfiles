@@ -33,6 +33,7 @@ source $fish_confs/nvim.fish
 # source $fish_confs/zoxide.fish
 # source $fish_confs/android.fish
 # source $fish_confs/podman.fish
+# source $fish_confs/zellij.fish
 
 # Quick actions
 # source $fish_confs/pb.fish
@@ -41,17 +42,10 @@ source $fish_confs/nvim.fish
 switch (uname)
   case Linux
     set -x OSTYPE linux
-alias copy xclip
-    alias trash 'gio trash'
+    source "$XDG_CONFIG_HOME"/fish/platform/linux.fish
   case Darwin
     set -x OSTYPE macos
-alias copy pbcopy
-    function trash -d "Move files to trash on macOS"
-      for arg in $argv
-        set -l file (realpath "$arg")
-        /usr/bin/osascript -e "tell application \"Finder\" to delete POSIX file \"$file\"" >/dev/null
-      end
-    end
+    source "$XDG_CONFIG_HOME"/fish/platform/macos.fish
   case 'MSYS_NT*'
     set -x OSTYPE windows
     source "$XDG_CONFIG_HOME"/fish/platform/windows.fish
