@@ -18,7 +18,7 @@ Config files contains configs of the following packages:
 - [fastfetch](https://github.com/fastfetch-cli/fastfetch) (c)
 - [fish](https://github.com/fish-shell/fish-shell) (rust)
 - [git](https://github.com/git/git) (c)
-- [jj](https://www.jj-vcs.dev/latest/) (rust)
+- [lazygit](https://github.com/jesseduffield/lazygit) (go)
 - [pip](https://github.com/pypa/pip) (python)
 - [python](https://github.com/python/cpython) (python)
 - [surfingkeys](https://github.com/brookhong/Surfingkeys) (chrome/edge/firefox plugin)
@@ -31,16 +31,15 @@ If you don't want to use any of them, just skip creating link to it.
 
 Extra fish shell configs for:
 
+- [adb](https://developer.android.com/tools/releases/platform-tools) (c)
 - [cmake](https://github.com/Kitware/CMake) (c)
 - [eza](https://github.com/eza-community/eza) (rust)
 - [fzf](https://github.com/junegunn/fzf) (go)
 - [git](https://github.com/git/git) (c)
 - [homebrew](https://github.com/Homebrew/brew) (ruby)
-- [jj](https://www.jj-vcs.dev/latest/) (rust)
 - [neovim](https://github.com/neovim/neovim) (vimscript)
-- [pacman](https://gitlab.archlinux.org/pacman/pacman) (c)
-- pass
-- [pnpm](https://github.com/pnpm/pnpm) (typescript)
+- [pacman](https://wiki.archlinux.org/title/Pacman) (c)
+- [pb](https://fars.ee/) (curl action alias)
 - [podman](https://github.com/containers/podman) (go)
 - [python](https://github.com/python/cpython) (python)
 - [rust](https://github.com/rust-lang/rust) (rust)
@@ -48,6 +47,7 @@ Extra fish shell configs for:
 - [vscode](https://github.com/microsoft/vscode) (typescript)
 - [yazi](https://github.com/sxyazi/yazi) (rust)
 - [zellij](https://github.com/zellij-org/zellij) ([zjstatus](https://github.com/dj95/zjstatus)) (rust)
+- [zerobrew](https://github.com/lucasgelfond/zerobrew) (rust)
 - [zoxide](https://github.com/ajeetdsouza/zoxide) (rust)
 
 You can enable them by uncomment line in `<fishconfig>/custom.fish`.
@@ -60,6 +60,8 @@ These packages don't need any configs, but I use it and having a good experience
 
 - [onefetch](https://github.com/o2sh/onefetch/) (rust)
 - [ripgrep](https://github.com/BurntSushi/ripgrep) (rust)
+- [fzf](https://github.com/junegunn/fzf) (c)
+- [delta](https://github.com/dandavison/delta) (rust)
 - [tldr](https://github.com/isacikgoz/tldr) (go interactive version)
 
 ## Installation
