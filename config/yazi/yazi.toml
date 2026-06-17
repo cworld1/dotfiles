@@ -1,5 +1,16 @@
 [mgr]
+ratio = [2, 2, 3]
 sort_dir_first=true
+show_hidden = true
+show_symlink = true
+mouse_events = ["click", "scroll"]
+
+[preview]
+image_delay = 30
+image_filter = "triangle"
+image_quality = 85
+ueberzug_scale = 1
+ueberzug_offset = [0, 0, 0, 0]
 
 [opener]
 edit = [
