@@ -1,0 +1,138 @@
+git:
+  pagers:
+    - externalDiffCommand: "C:/Users/cworld/.config/lazygit/lazygit-pager.bat"
+    - pager: delta --dark --paging=never --features="nord" --syntax-theme="Nord"
+      colorArg: always
+      useConfig: false
+  # Command used when displaying the current branch git log in the main window
+  branchLogCmd: git log --graph --color=always --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) -%C(bold yellow)%d%C(reset) %C(white)%s%C(reset) %C(bold green)(%ar)%C(reset) %C(dim white)- %an%C(reset)'
+
+gui:
+  # [global]
+  # If true, show the '5 of 20' footer at the bottom of list views
+  showListFooter: false
+  # If true, add a "/" root item in the file tree representing the root of the
+  # repository. It is only added when necessary, i.e. when there is more than one
+  # item at top level.
+  showRootItemInFileTree: false
+  # If true, show jump-to-window keybindings in window titles.
+  showPanelJumps: false
+  # If true (default), file icons are shown in the file views. Only relevant if
+  # NerdFontsVersion is not empty.
+  # Window border style.
+  # One of 'rounded' (default) | 'single' | 'double' | 'hidden' | 'bold'
+  border: single
+
+  # [nerd]
+  showIcons: true
+  # Nerd fonts version to use.
+  # One of: '2' | '3' | empty string (default)
+  # If empty, do not show icons.
+  nerdFontsVersion: "3"
+
+  # [diff]
+  # The number of spaces per tab; used for everything that's shown in the main
+  # view, but probably mostly relevant for diffs.
+  # Note that when using a pager, the pager has its own tab width setting, so you
+  # need to pass it separately in the pager command.
+  tabWidth: 2
+
+  # [commit]
+  # Length of commit hash in commits view. 0 shows '*' if NF icons aren't on.
+  commitHashLength: 7
+  # If true, show commit hashes alongside branch names in the branches view.
+  showBranchCommitHash: true
+
+  # Whether to stack UI components on top of each other.
+  # One of 'auto' (default) | 'always' | 'never'
+  portraitMode: auto
+
+  # [theme]
+  # Config relating to colors and styles.
+  # See https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md#color-attributes
+  theme:
+    activeBorderColor: ["#88C0D0", bold]
+    inactiveBorderColor: ["#97A1AB"]
+    searchingActiveBorderColor: ["#EBCB8B", bold]
+    optionsTextColor: ["#81A1C1"]
+    selectedLineBgColor: ["#3B4252"]
+    inactiveViewSelectedLineBgColor: ["#434C5E"]
+    cherryPickedCommitFgColor: ["#2E3440"]
+    cherryPickedCommitBgColor: ["#EBCB8B"]
+    markedBaseCommitFgColor: ["#2E3440"]
+    markedBaseCommitBgColor: ["#A3BE8C"]
+    unstagedChangesColor: ["#BF616A"]
+    defaultFgColor: ["#D8DEE9"]
+
+customCommands:
+  - key: "c"
+    context: "files"
+    description: "Create new conventional commit"
+    prompts:
+      - type: "menu"
+        key: "type"
+        title: " Type of change "
+        options:
+          - name: "feat"
+            description: "A new feature"
+            value: "feat"
+            key: "f"
+          - name: "fix"
+            description: "A bug fix"
+            value: "fix"
+            key: "x"
+          - name: "chore"
+            description: "Other changes that don't modify src or test files"
+            value: "chore"
+            key: "c"
+          - name: "build"
+            description: "Changes that affect the build system or external dependencies"
+            value: "build"
+            key: "b"
+          - name: "ci"
+            description: "Changes to CI configuration files and scripts"
+            value: "ci"
+            key: "i"
+          - name: "docs"
+            description: "Documentation only changes"
+            value: "docs"
+            key: "d"
+          - name: "perf"
+            description: "A code change that improves performance"
+            value: "perf"
+            key: "p"
+          - name: "refactor"
+            description: "A code change that neither fixes a bug nor adds a feature"
+            value: "refactor"
+            key: "r"
+          - name: "revert"
+            description: "Reverts a previous commit"
+            value: "revert"
+            key: "v"
+          - name: "style"
+            description: "Changes that do not affect the meaning of the code"
+            value: "style"
+            key: "s"
+          - name: "test"
+            description: "Adding missing tests or correcting existing tests"
+            value: "test"
+            key: "t"
+      - type: "menu"
+        key: "hasScope"
+        title: " Scope "
+        options:
+          - name: "specify"
+            value: "yes"
+            key: "y"
+          - name: "none"
+            value: "no"
+            key: "n"
+      - type: "input"
+        title: " Scope "
+        key: "scope"
+        condition: '{{ eq .Form.hasScope "yes" }}'
+      - type: "input"
+        title: " Description "
+        key: "subject"
+    command: 'git commit --message ''{{.Form.type}}{{ if .Form.scope }}({{ .Form.scope }}){{ end }}: {{.Form.subject}}'''
+    loadingText: "Creating conventional commit..."
