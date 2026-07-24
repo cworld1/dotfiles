@@ -36,7 +36,7 @@ source $fish_confs/nvim.fish
 # source $fish_confs/zellij.fish
 
 # Quick actions
-# source $fish_confs/pb.fish
+# source $fish_confs/curl.fish
 
 # [Others] sys detect
 switch (uname)
