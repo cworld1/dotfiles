@@ -19,6 +19,7 @@ abbr -a gb 'git branch --all --verbose'
 abbr -a gC 'git checkout'
 abbr -a gCm 'git checkout main'
 abbr -a gCd 'git checkout dev'
+abbr -a gD 'git checkout --'
 # Remote
 abbr -a gf 'git fetch'
 abbr -a gfa 'git fetch --all --prune'
