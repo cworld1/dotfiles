@@ -134,5 +134,5 @@ customCommands:
       - type: "input"
         title: " Description "
         key: "subject"
-    command: 'git commit --message ''{{.Form.type}}{{ if .Form.scope }}({{ .Form.scope }}){{ end }}: {{.Form.subject}}'''
+    command: 'git commit --message "{{.Form.type}}{{ if .Form.scope }}({{ .Form.scope }}){{ end }}: {{.Form.subject}}"'
     loadingText: "Creating conventional commit..."
