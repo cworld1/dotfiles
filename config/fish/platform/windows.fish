@@ -8,7 +8,8 @@ function to_win_path --argument path
 end
 
 # Files
-alias open explorer
+# alias open explorer
+alias open start
 function trash --description "Move files or folders to Windows Recycle Bin"
   for item in $argv
     set winpath (to_win_path (realpath $item))
