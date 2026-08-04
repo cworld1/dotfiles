@@ -1,5 +1,5 @@
 # Proxy
-function proxy --description "Enable, disable, toggle or info HTTP/HTTPS proxy"
+function proxy --description "Manage shell proxy enviroment"
   # Set address
   set -l addr $argv[2]
   if test -z "$addr"
@@ -34,7 +34,3 @@ function proxy --description "Enable, disable, toggle or info HTTP/HTTPS proxy"
       return 1
   end
 end
-abbr -a pt 'proxy toggle'
-abbr -a p1 'proxy on'
-abbr -a p0 'proxy off'
-abbr -a pi 'proxy info'

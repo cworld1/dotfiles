@@ -18,6 +18,12 @@ if status is-interactive
   alias :q exit
   alias :Q exit
 
+  # Function
+  abbr -a pt 'proxy toggle'
+  abbr -a p1 'proxy on'
+  abbr -a p0 'proxy off'
+  abbr -a pi 'proxy info'
+
   # User
   alias clean~ xdg-ninja
   alias osfetch fastfetch
