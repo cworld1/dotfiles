@@ -25,6 +25,7 @@ abbr -a gf 'git fetch'
 abbr -a gfa 'git fetch --all --prune'
 abbr -a gp 'git pull --rebase'
 abbr -a gP 'git push'
+abbr -a gro 'open $(git remote get-url origin | sed "s/\.git\$//")'
 # Inspect
 abbr -a gl 'git log --stat'
 abbr -a glg "git log --graph --abbrev-commit --decorate \
