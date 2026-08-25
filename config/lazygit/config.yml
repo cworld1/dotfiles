@@ -1,7 +1,8 @@
 git:
-  pagers:
-    - externalDiffCommand: "C:/Users/cworld/.config/lazygit/lazygit-pager.bat"
-    - pager: delta --dark --paging=never --features="nord" --syntax-theme="Nord"
+  diffRenderers:
+    - command: "C:/Users/cworld/.config/lazygit/lazygit-pager.bat"
+      type: extDiff
+    - command: delta --dark --paging=never --features="nord" --syntax-theme="Nord"
       colorArg: always
       useConfig: false
   # Command used when displaying the current branch git log in the main window
@@ -42,7 +43,6 @@ gui:
   commitHashLength: 7
   # If true, show commit hashes alongside branch names in the branches view.
   showBranchCommitHash: true
-
   # Whether to stack UI components on top of each other.
   # One of 'auto' (default) | 'always' | 'never'
   portraitMode: auto
