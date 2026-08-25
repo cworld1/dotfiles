@@ -1,4 +1,4 @@
-export PYTHONSTARTUP="$XDG_CONFIG_HOME"/python/pythonrc
+export PYTHON_HISTORY="$XDG_STATE_HOME"/python/history
 
 # Venv auto actiavation
 function __auto_source_venv --on-variable PWD --description "Activate/Deactivate virtualenv on directory change"
