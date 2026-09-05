@@ -24,7 +24,10 @@
 [user]
   name = CWorld
   email = cworld0@qq.com
-  signingkey = D42B539DC7C62A82
+  # Old: gpg
+  # signingkey = D42B539DC7C62A82
+  # New: ssh
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHh+hOFhxyL0g4g5ckm1zsSnROibzWkJTtpDHQrwtP8R
 
 # ----- Display -----
 [color]
@@ -46,7 +49,11 @@
   autocrlf = input
   safecrlf = true
 [gpg]
-  program = gpg
+  # New: ssh
+  format = ssh
+[gpg "ssh"]
+  # Windows
+  # program = "C:/Users/cworld/AppData/Local/Microsoft/WindowsApps/op-ssh-sign.exe"
 [help]
   autocorrect = prompt
 
