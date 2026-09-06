@@ -39,16 +39,21 @@ source $fish_confs/nvim.fish
 # source $fish_confs/curl.fish
 
 # [Others] sys detect
-switch (uname)
-  case Linux
-    set -x OSTYPE linux
-    source "$XDG_CONFIG_HOME"/fish/platform/linux.fish
-  case Darwin
-    set -x OSTYPE macos
-    source "$XDG_CONFIG_HOME"/fish/platform/macos.fish
-  case 'MSYS_NT*'
-    set -x OSTYPE windows
-    source "$XDG_CONFIG_HOME"/fish/platform/windows.fish
-  case '*'
-    set -x OSTYPE unknown
+if test "$OS" = Windows_NT; or set -q MSYSTEM
+  set -x OSTYPE windows
+  status is-interactive; and source "$XDG_CONFIG_HOME"/fish/platform/windows.fish
+else
+  switch (uname)
+    case Linux
+      set -x OSTYPE linux
+      status is-interactive; and source "$XDG_CONFIG_HOME"/fish/platform/linux.fish
+    case Darwin
+      set -x OSTYPE macos
+      status is-interactive; and source "$XDG_CONFIG_HOME"/fish/platform/macos.fish
+    case 'MSYS_NT*' 'MINGW*_NT*' 'CYGWIN_NT*'
+      set -x OSTYPE windows
+      status is-interactive; and source "$XDG_CONFIG_HOME"/fish/platform/windows.fish
+    case '*'
+      set -x OSTYPE unknown
+  end
 end
