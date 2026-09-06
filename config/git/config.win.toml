@@ -1,0 +1,7 @@
+[gpg "ssh"]
+# one-password
+program = "C:/Users/cworld/AppData/Local/Microsoft/WindowsApps/op-ssh-sign.exe"
+
+[credential]
+helper = manager
+# credentialStore = wincredman

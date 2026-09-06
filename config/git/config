@@ -4,22 +4,6 @@
 [https]
   proxy = http://127.0.0.1:7890
 
-# ----- Credentials -----
-[credential]
-### For Windows
-  # helper = manager
-	# credentialStore = wincredman
-### For macOS
-  # helper = osxkeychain
-### For Linux UI
-  # helper = libsecret
-### For Linux Cli
-  # helper = git-credential-manager
-  # credentialStore = gpg
-### Generics
-[credential "https://dev.azure.com"]
-	useHttpPath = true
-
 # ----- User -----
 [user]
   name = CWorld
@@ -29,13 +13,7 @@
   # New: ssh
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHh+hOFhxyL0g4g5ckm1zsSnROibzWkJTtpDHQrwtP8R
 
-# ----- Display -----
-[color]
-  interactive = true
-[column]
-  ui = auto
-
-# ----- Manipulator -----
+# ----- Basic -----
 [init]
   defaultBranch = main
 [core]
@@ -51,11 +29,14 @@
 [gpg]
   # New: ssh
   format = ssh
-[gpg "ssh"]
-  # Windows
-  # program = "C:/Users/cworld/AppData/Local/Microsoft/WindowsApps/op-ssh-sign.exe"
 [help]
   autocorrect = prompt
+
+# ----- Display -----
+[color]
+  interactive = true
+[column]
+  ui = auto
 
 # ----- Functions -----
 [pull]
@@ -102,8 +83,10 @@
   # For files that the system considers to be text,
   # perform a line-by-line comparison to produce the diff
   textconv = astextplain
+[credential "https://dev.azure.com"]
+	useHttpPath = true
 
-# ----- Large File Storage Configurations -----
+# ----- Filter -----
 [filter "lfs"]
   clean = git-lfs clean -- %f
   smudge = git-lfs smudge -- %f
