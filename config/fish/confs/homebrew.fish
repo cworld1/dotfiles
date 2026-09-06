@@ -5,6 +5,8 @@ set -gx HOMEBREW_BOTTLE_DOMAIN "https://mirrors.bfsu.edu.cn/homebrew-bottles"
 set -gx HOMEBREW_PIP_INDEX_URL "https://mirrors.bfsu.edu.cn/pypi/web/simple"
 set -gx HOMEBREW_PORTABLE_RUBY_URL "https://mirrors.bfsu.edu.cn/homebrew-bottles/bottles-portable-ruby"  
 
+status is-interactive; or return
+
 abbr -a brews 'brew search'
 abbr -a brewi 'brew info'
 abbr -a brewI 'brew install'

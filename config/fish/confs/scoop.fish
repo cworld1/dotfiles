@@ -1,3 +1,5 @@
+status is-interactive; or return
+
 abbr -a scoops 'scoop search'
 abbr -a scoopi 'scoop info'
 abbr -a scoopI 'scoop install'

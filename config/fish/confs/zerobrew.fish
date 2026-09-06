@@ -1,10 +1,3 @@
-abbr -a zbi 'zb info'
-abbr -a zbI 'zb install'
-abbr -a zbu 'zb update'
-abbr -a zbU 'zb upgrade'
-abbr -a zbr 'zb uninstall'
-abbr -a zbc 'zb gc'
-
 # >>> zerobrew >>>
 # zerobrew
 set -gx ZEROBREW_DIR "$XDG_CONFIG_HOME/zerobrew"
@@ -212,3 +205,13 @@ complete -c zb -n "__fish_zb_using_subcommand help; and not __fish_seen_subcomma
 complete -c zb -n "__fish_zb_using_subcommand help; and not __fish_seen_subcommand_from install bundle uninstall migrate list info doctor gc reset init completion run update outdated upgrade help" -f -a "help" -d 'Print this message or the help of the given subcommand(s)'
 complete -c zb -n "__fish_zb_using_subcommand help; and __fish_seen_subcommand_from bundle" -f -a "install" -d 'Install packages from a Brewfile'
 complete -c zb -n "__fish_zb_using_subcommand help; and __fish_seen_subcommand_from bundle" -f -a "dump" -d 'Dump installed packages to a Brewfile'
+
+# interactive
+status is-interactive; or return
+
+abbr -a zbi 'zb info'
+abbr -a zbI 'zb install'
+abbr -a zbu 'zb update'
+abbr -a zbU 'zb upgrade'
+abbr -a zbr 'zb uninstall'
+abbr -a zbc 'zb gc'

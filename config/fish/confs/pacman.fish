@@ -1,3 +1,5 @@
+status is-interactive; or return
+
 if test "$argv[1]" = "msys"
   abbr -a pacs 'pacman -Ss'
   abbr -a paci 'pacman -Si'

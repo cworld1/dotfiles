@@ -1,3 +1,5 @@
+status is-interactive; or return
+
 # pb
 # See https://fars.ee/
 abbr -a pb 'curl -F "c=@-" "http://fars.ee/"'
