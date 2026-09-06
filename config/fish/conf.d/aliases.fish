@@ -5,7 +5,7 @@ if status is-interactive
 
   # System
   abbr -a rmf 'rm -rf' # force delete
-  abbr -a tempcd 'mktemp -d | cd' # make temp dir & cd
+  abbr -a tempcd 'cd (mktemp -d)' # make temp dir & cd
   abbr -a mkdir 'mkdir -v -p'
   function mkcd -d "Create and enter directory"
     mkdir -p $argv && cd $argv

@@ -19,8 +19,6 @@ set -gx XDG_STATE_HOME $HOME/.local/state
 set -gx HISTFILE "$XDG_STATE_HOME"/bash/history
 # Less
 set -gx LESSHISTFILE "$XDG_STATE_HOME"/less/history
-# Bash
-set -gx HISTFILE "$XDG_STATE_HOME"/bash/history
 # Go
 set -gx GOPATH "$XDG_DATA_HOME"/go
 # Pass
