@@ -1,5 +1,1 @@
-contains $HOME/.local/bin
-or set PATH $HOME/.local/bin $PATH
-
-contains $HOME/.local/scripts
-or set PATH $HOME/.local/scripts $PATH
+fish_add_path --path $HOME/.local/bin $HOME/.local/scripts
