@@ -4,7 +4,7 @@ if status is-interactive
   abbr -a ..... "cd ../../../.."
 
   # System
-  abbr -a rmf 'rm -rf' # force delete
+  abbr -a rmr 'rm -r' # recursive delete
   abbr -a tempcd 'cd (mktemp -d)' # make temp dir & cd
   abbr -a mkdir 'mkdir -v -p'
   function mkcd -d "Create and enter directory"

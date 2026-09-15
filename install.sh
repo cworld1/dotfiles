@@ -21,7 +21,7 @@ function link_directory() {
 
 	if [ -e "$CONFIG_HOME/$FILENAME" ]; then
 		if $FORCE; then
-			rm -rf "$CONFIG_HOME/$FILENAME"
+			rm -r "$CONFIG_HOME/$FILENAME"
 			echo "Deleted: $CONFIG_HOME/$FILENAME"
 		else
 			mv "$CONFIG_HOME/$FILENAME" "$CONFIG_HOME/$FILENAME.bak"
