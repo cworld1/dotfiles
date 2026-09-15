@@ -101,11 +101,14 @@
 # ----- Alias -----
 [alias]
   deinit = "!f() { \
-    GIT_ROOT=$(git rev-parse --show-toplevel 2>/dev/null); \
-    if [ -z \"$GIT_ROOT\" ]; then \
-      echo 'Error: not inside a Git repository.' >&2; exit 1; \
-    fi; \
-    echo \"Removing .git from $GIT_ROOT...\"; \
-    rm -rf \"$GIT_ROOT/.git\"; \
-    echo 'Git de‑initialized.'; \
+    root=$(git rev-parse --show-toplevel) || return 1; \
+    printf 'Remove Git metadata from %s? [y/N] ' \"$root\"; \
+    read -r answer; \
+    [ \"$answer\" = y ] || [ \"$answer\" = Y ] || return 0; \
+    rm -r -- \"$root/.git\"; \
+    echo 'Git de-initialized.'; \
+  }; f"
+  ignore = "!f() { \
+    root=$(git rev-parse --show-toplevel) || return 1; \
+    printf '%s\\n' \"$@\" | sed 's#^\\./#/#' >> \"$root/.gitignore\"; \
   }; f"
