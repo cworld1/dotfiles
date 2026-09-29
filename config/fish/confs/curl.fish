@@ -11,9 +11,27 @@ function pbd
 end
 
 # IP
-abbr -a ip 'curl "https://myip.ipip.net/"'
-abbr -a ipv6 'curl -6 "https://myip.ipip.net/"'
-abbr -a ipv4 'curl -4 "https://myip.ipip.net/"'
+abbr -a ip 'curl myip.ipip.net'
+abbr -a ipv6 'curl -6 myip.ipip.net'
+abbr -a ipv4 'curl -4 myip.ipip.net'
+
+# Weather
+function weather
+  set -q LOCATION[1]; or set LOCATION $argv[1]
+  curl "https://v2d.wttr.in/$LOCATION"
+end
+
+# Tldr cheat
+function cheat
+  echo "Excuting: curl https://cht.sh/$argv | delta"
+  curl "https://cht.sh/$argv" | delta
+end
+
+# QRCode
+function qrcode
+  echo "Excuting: cutl https://qrenco.de/$argv"
+  curl "https://qrenco.de/$argv"
+end
 
 # GitHub
 function gh_newrepo
@@ -23,7 +41,6 @@ function gh_newrepo
   end
   set -l repo $argv[1]
   set -l private (test "$argv[2]" = "-p"; and echo true; or echo false)
-
   read -sP "GitHub token: " token
   echo "Requesting..."
   curl -sS \
