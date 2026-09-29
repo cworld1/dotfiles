@@ -1,7 +1,10 @@
 [include]
-  # path = ./config.win.toml
-  # path = ./config.mac.toml
-  # path = ./config.linux.toml
+  # platform
+  # path = ./plaform.win.toml
+  # path = ./plaform.mac.toml
+  # path = ./plaform.linux.toml
+  # plugin
+  # path = ./plugin.delta.toml
 
 # ----- Network -----
 [http]
@@ -12,7 +15,7 @@
 # ----- User -----
 [user]
   name = CWorld
-  email = cworld0@qq.com
+  email = 37377181+cworld1@users.noreply.github.com
   # Old: gpg
   # signingkey = D42B539DC7C62A82
   # New: ssh
