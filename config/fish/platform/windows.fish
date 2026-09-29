@@ -22,6 +22,11 @@ end
 alias copy clip
 alias paste 'powershell get-clipboard'
 
+# Notification (notify <title> <content>)
+function notify --description "Send notification to deaktop"
+  powershell -c "Add-Type -A System.Windows.Forms; \$n=New-Object Windows.Forms.NotifyIcon; \$n.Icon=[Drawing.SystemIcons]::Information; \$n.Visible=1; \$n.ShowBalloonTip(3,'$argv[1]','$argv[2..-1]','None'); Start-Sleep 3; \$n.Dispose()"
+end
+
 # System actions
 alias poweroff 'shutdown /s /t 0'
 alias reboot 'shutdown /r /t 0'

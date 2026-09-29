@@ -8,3 +8,9 @@ end
 
 # Clipboard
 alias copy pbcopy
+
+# Notification (notify <title> <content>)
+function notify --description "Send notification to desktop"
+  # say $argv[1]
+  osascript -e "display notification \"$argv[2..-1]\" with title \"$argv[1]\" sound name \"default\""
+end
