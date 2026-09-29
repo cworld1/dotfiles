@@ -1,8 +1,8 @@
 [include]
   # platform
-  # path = ./plaform.win.toml
-  # path = ./plaform.mac.toml
-  # path = ./plaform.linux.toml
+  # path = ./platform.win.toml
+  # path = ./platform.mac.toml
+  # path = ./platform.linux.toml
   # plugin
   # path = ./plugin.delta.toml
 
