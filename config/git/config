@@ -1,3 +1,4 @@
+# vim: set filetype=toml :
 [include]
   # platform
   # path = ./platform.win.toml
@@ -7,19 +8,19 @@
   # path = ./plugin.delta.toml
 
 # ----- Network -----
-[http]
-  proxy = http://127.0.0.1:7890
-[https]
+[http "https://github.com"]
   proxy = http://127.0.0.1:7890
 
 # ----- User -----
 [user]
   name = CWorld
-  email = 37377181+cworld1@users.noreply.github.com
+  email = cworld0a@gmail.com
   # Old: gpg
   # signingkey = D42B539DC7C62A82
   # New: ssh
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHh+hOFhxyL0g4g5ckm1zsSnROibzWkJTtpDHQrwtP8R
+[includeIf "hasconfig:remote.*.url:https://github.com/**"]
+  path = ./site.github.toml
 
 # ----- Basic -----
 [init]
