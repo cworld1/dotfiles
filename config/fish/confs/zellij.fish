@@ -1,1 +1,1 @@
-zellij list-sessions | grep -v EXITED
+zellij list-sessions
