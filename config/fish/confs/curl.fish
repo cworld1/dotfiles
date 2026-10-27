@@ -11,9 +11,9 @@ function pbd
 end
 
 # IP
-abbr -a ip 'curl myip.ipip.net'
-abbr -a ipv6 'curl -6 myip.ipip.net'
-abbr -a ipv4 'curl -4 myip.ipip.net'
+abbr -a myip 'curl myip.ipip.net'
+abbr -a myipv6 'curl -6 myip.ipip.net'
+abbr -a myipv4 'curl -4 myip.ipip.net'
 
 # Weather
 function weather
