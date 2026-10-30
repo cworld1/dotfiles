@@ -1,0 +1,7 @@
+# https://yazi-rs.github.io/docs/configuration/keymap
+
+[mgr]
+append_keymap = [
+  { on = [ "g", "D" ], run = "cd 'D:\\'", desc = "Go to D drive", for = "windows" },
+  { on = [ "t", "d" ], run = "close", desc = "Close current tab" }
+]
