@@ -1,9 +1,17 @@
-set -gx HOMEBREW_BREW_GIT_REMOTE "https://mirrors.bfsu.edu.cn/git/homebrew/brew.git"
-set -gx HOMEBREW_CORE_GIT_REMOTE "https://mirrors.bfsu.edu.cn/git/homebrew/homebrew-core.git"
-set -gx HOMEBREW_API_DOMAIN "https://mirrors.bfsu.edu.cn/homebrew-bottles/api"
-set -gx HOMEBREW_BOTTLE_DOMAIN "https://mirrors.bfsu.edu.cn/homebrew-bottles"
-set -gx HOMEBREW_PIP_INDEX_URL "https://mirrors.bfsu.edu.cn/pypi/web/simple"
-set -gx HOMEBREW_PORTABLE_RUBY_URL "https://mirrors.bfsu.edu.cn/homebrew-bottles/bottles-portable-ruby"  
+# https://help.mirrors.cernet.edu.cn/homebrew/
+set -gx HOMEBREW_BREW_GIT_REMOTE "https://mirrors.cernet.edu.cn/homebrew/brew.git"
+set -gx HOMEBREW_CORE_GIT_REMOTE "https://mirrors.cernet.edu.cn/homebrew/homebrew-core.git"
+set -gx HOMEBREW_API_DOMAIN "https://mirrors.cernet.edu.cn/homebrew-bottles/api"
+set -gx HOMEBREW_BOTTLE_DOMAIN "https://mirrors.cernet.edu.cn/homebrew-bottles"
+set -gx HOMEBREW_PIP_INDEX_URL "https://mirrors.cernet.edu.cn/pypi/web/simple"
+# use when install
+# set -gx HOMEBREW_INSTALL_FROM_API 1
+
+if test "$argv[1]" = "macos"
+  eval (/opt/homebrew/bin/brew shellenv)
+else
+  eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+end
 
 status is-interactive; or return
 
