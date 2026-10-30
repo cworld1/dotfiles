@@ -47,7 +47,6 @@ Extra fish shell configs for:
 - [vscode](https://github.com/microsoft/vscode) (typescript)
 - [yazi](https://github.com/sxyazi/yazi) (rust)
 - [zellij](https://github.com/zellij-org/zellij) ([zjstatus](https://github.com/dj95/zjstatus)) (rust)
-- [zerobrew](https://github.com/lucasgelfond/zerobrew) (rust)
 - [zoxide](https://github.com/ajeetdsouza/zoxide) (rust)
 
 You can enable them by uncomment line in `<fishconfig>/custom.fish`.
