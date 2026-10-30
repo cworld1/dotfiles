@@ -15,8 +15,9 @@ source $fish_confs/fish_vi_mode.fish
 # source $fish_confs/pacman.fish
 # source $fish_confs/pacman.fish msys # msys version
 # source $fish_confs/scoop.fish
+# source $fish_confs/winget macos
 # source $fish_confs/homebrew.fish
-# source $fish_confs/zerobrew.fish # another homebrew manager
+# source $fish_confs/homebrew.fish macos # macos version
 
 # Languages
 source $fish_confs/python.fish

@@ -1,0 +1,7 @@
+abbr -a wingets 'winget search'
+abbr -a wingeti 'winget show'
+abbr -a wingetI 'winget install'
+abbr -a wingetu 'winget upgrade'
+abbr -a wingetU 'winget upgrade --all'
+abbr -a wingetr 'winget uninstall -all-versions --purge'
+abbr -a wingetc 'winget cache rm --all && scoop cleanup -ak'
